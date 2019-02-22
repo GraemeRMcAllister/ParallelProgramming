@@ -1,479 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8e8573c-87e0-465b-aab0-84f2230d8e57" name="Default Changelist" comment="">
-      <change beforePath="H:/.gitignore" beforeDir="false" />
-      <change beforePath="H:/LICENSE" beforeDir="false" />
-      <change beforePath="H:/README.md" beforeDir="false" />
-      <change beforePath="H:/build.gradle" beforeDir="false" />
-      <change beforePath="H:/settings.gradle" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c02/ConsumeHello.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c02/Consumer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c02/ProduceHN.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c02/ProduceHW.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c02/Producer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c02/RunHelloName.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c02/RunHelloWorld.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c02/RunProducerConsumer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c03/TestFibonacciV1.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c03/TestFibonacciV2.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c03/TestGIntegrate.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c03/TestGNumbers.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c03/TestGParPrint.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c03/TestGSquares.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c04/ResetNumbers.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c04/ResetPrefix.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c04/ResetUser.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c04/RunReset.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c05/Controller.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c05/QConsumer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c05/QProducer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c05/Queue.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c05/RunQueue.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c05/RunScaler.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c05/Scale.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c05/ScaledData.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c06/ConsumeHelloForTest.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c06/HelloWorldTest.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c06/QConsumerForTest.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c06/QProducerForTest.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c06/QueueTest.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c07/BadC.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c07/BadP.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c07/Client.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c07/RunBadPC.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c07/RunDeadlockedCrossedClients.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c07/RunWorkingCrossedClients.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c07/Server.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c08/CSMux.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c08/RunManyClientsWithTwoServers.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c08/Server.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c09/EventData.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c09/EventGenerator.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c09/EventHandler.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c09/EventOWBuffer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c09/EventProcessing.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c09/EventPrompter.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c09/EventReceiver.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c09/EventSource.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c09/EventStream.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c09/RunMultiStream.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c09/RunSingleStream.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c09/UniformlyDistributedDelay.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/Elementv0.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/Elementv1.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/Elementv2.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/ExtraElement.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/ExtraElementv1.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/ExtraElementv2.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/Receiver.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/RingElementv0.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/RingElementv1.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/RingElementv2.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/RingPacket.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/Runv0.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/Runv1.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/Runv1a.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/Runv2.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c10/Sender.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c11/Particle.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c11/ParticleInterface.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c11/ParticleManager.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c11/Position.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c11/RunParticles.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c11/UserInterface.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/Chef.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/Clock.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/ClockedQueuingServery.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/InstantCanteen.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/InstantServery.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/Kitchen.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/Philosopher.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/PhilosopherBehaviour.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/QueuingCanteen.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/QueuingServery.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/RunClockedQueuingCollege.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/RunInstantCollege.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/canteen/RunQueuingCollege.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/fork/Butler.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/fork/Fork.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/fork/LazyButler.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/fork/Philosopher.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/fork/RunCollege.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c12/fork/RunLazyCollege.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c13/CrewMap.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c13/DataBase.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c13/DataObject.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c13/Read.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c13/ReadClerk.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c13/RunDataBase.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c13/Write.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c13/WriteClerk.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c14/BarrierManager.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c14/DisplayController.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c14/Gallery.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c14/MouseBufferPreCon.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c14/MouseBufferPrompt.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c14/RunClickTest.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c14/TargetController.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c14/TargetFlusher.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c14/TargetManager.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c14/TargetProcess.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/C15.pdf" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/Get.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/Put.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/Receiver.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/RunCanteen.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/RunChef.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/RunGet.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/RunManyGet.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/RunPhil.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/RunPut.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/RunReceiver.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/RunSender.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net/Sender.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/Get.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/Put.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/Receiver.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/RunCanteen.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/RunChef.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/RunDBMain.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/RunDBRead.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/RunDBWrite.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/RunGet.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/RunManyGet.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/RunPhilosophers.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/RunPut.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/RunPutGet.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/RunReceiver.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/RunSender.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c15/net2/Sender.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net/C16.pdf" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net/PrintJob.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net/PrintSpooler.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net/PrintUser.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net/Printline.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net/RunPrintSpooler.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net/RunPrintUser.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net2/PrintJob.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net2/PrintSpooler.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net2/PrintUser.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net2/Printline.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net2/RunPrintSpooler.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c16/net2/RunPrintUser.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/counted/C17.pdf" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/counted/CountedData.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/counted/CountedEvaluator.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/counted/CountedSampledNetwork.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/counted/CountedSamplingTimer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/counted/CountingGatherer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/counted/CountingSampler.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/counted/RunCountedSampledSystem.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/flagged/DataGenerator.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/flagged/Evaluator.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/flagged/FlaggedSystemData.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/flagged/Gatherer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/flagged/RunSamplingSystem.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/flagged/SampledNetwork.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/flagged/Sampler.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/flagged/SamplingTimer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/flagged/SystemData.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/sniff/Comparator.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/sniff/RunScalingComparator.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/sniff/ScalingSystem.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/sniff/Sniffer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/sniff/SnifferComparator.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/test/net/CollectNumbers.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/test/net/GenerateNumbers.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/test/net/RunScalingDevice.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/test/net/RunTestPart.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/test/net/ScalingDevice.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/test/net2/CollectNumbers.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/test/net2/GenerateNumbers.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/test/net2/RunScalingDevice.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/test/net2/RunTestPart.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c17/test/net2/ScalingDevice.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/Agent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/BackAgent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/BackRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/C18.pdf" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/ForwardBackAgent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/ForwardBackRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/ProcessNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/Root.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/RunAgentSystem.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/RunBackRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/RunForwardBackRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/RunNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/RunRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/RunTripNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/RunTripRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/TripAgent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/TripNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net/TripRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/Agent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/BackAgent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/BackRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/ForwardBackAgent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/ForwardBackRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/ProcessNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/Root.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/RunAgentSystem.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/RunBackRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/RunForwardBackRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/RunNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/RunRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/RunTripNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/RunTripRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/TripAgent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/TripNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c18/net2/TripRoot.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/UniversalClient/RunUC.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/UniversalClient/UCCapability.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/UniversalClient/UCInterface.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/accessServer/AccessCapability.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/accessServer/AccessInterface.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/accessServer/AccessProcess.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/accessServer/AccessServer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/groupLocationService/GLcapability.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/groupLocationService/GLdata.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/groupLocationService/GLinterface.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/groupLocationService/GLprocess.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/groupLocationService/GroupLocationServer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/netObjects/ClientLocation.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/netObjects/ClientRequestData.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/serviceA/Aprocess.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/serviceA/ServerA.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/serviceB/Bprocess.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/serviceB/ServerB.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/serviceC/Cprocess.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c19/net2/serviceC/ServerC.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/AgentElement.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/AgentExtraElement.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/C20.pdf" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/Prompter.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/Queue.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/Receiver.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/RestartAgent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/RingAgentElement.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/RingPacket.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/RunElement.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/RunExtraElement.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/RunNode1.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/RunNode2.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/RunNode3.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/RunNode4.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/Sender.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/StateManager.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net/StopAgent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/AgentElement.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/AgentExtraElement.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/Prompter.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/Queue.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/Receiver.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/RestartAgent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/RingAgentElement.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/RingPacket.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/RunElement.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/RunExtraElementNode1.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/RunNode2.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/RunNode3.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/RunNode4.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/RunNode5.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/RunNode6.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/Sender.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/StateManager.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c20/net2/StopAgent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/AdaptiveAgent.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/AvailableNodeList.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/DataGenList.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/DataGenerator.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/DataGeneratorPrint.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/Gatherer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/NodeProcess.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/NodeProcessPrint.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/RunDataGen.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/RunGatherer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/RunNode10000.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/RunNode20000.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/RunNode30000.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/RunNode40000.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/RunNodeAll.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/Type1.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/Type1Process.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/Type2.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/Type2Process.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/Type3.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c21/net2/Type3Process.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/collector/Collector.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/collector/CopyOfCollector.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/collector/CopyOfRunCollector.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/collector/README" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/collector/RunCollector.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/emitter/CopyOfEmitter.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/emitter/CopyOfEmitterNet.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/emitter/CopyOfManipulateInterface.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/emitter/CopyOfRunEmitter.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/emitter/CopyOfTestObject.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/emitter/Emitter.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/emitter/EmitterNet.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/emitter/ManipulateInterface.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/emitter/README" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/emitter/RunEmitter.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/emitter/TestObject.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/universalClasses/InitObject.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/universalClasses/README" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/universalClasses/Sentinel.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/universalClasses/Signal.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/worker/CopyOfBaseNet.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/worker/CopyOfGetInput.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/worker/CopyOfRunBase.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/worker/CopyOfSendOutput.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/worker/CopyOfWorker.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/worker/DoWork.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/worker/GetInput.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/worker/README" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/worker/RunWorker.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/worker/SendOutput.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c22/worker/Worker.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/Collector.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/DataObject.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/Emitter.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/CopyOfRunArgMcPiHost.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/CopyOfRunArgMcPiNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/McPiCollector.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/McPiCore.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/McPiEmitter.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/McPiManager.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/McPiWorker.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/ReadMe" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/RunArgMcPiHost.bat" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/RunArgMcPiHost.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/RunArgMcPiNode.bat" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/RunArgMcPiNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/RunMcPiHost.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/RunMcPiNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/TestCollector.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/TestEmitter.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/TestMcPiNetwork.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/TestNetwork.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/MontecarloPi/TestWorker.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/Mprocess.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/ReadMe" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/RunC23Host.bat" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/RunC23Node.bat" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/RunHost.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/RunNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/Sprocess.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/WProcess.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/WS3 Diagram.docx" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/WS3 Diagram.pdf" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/launcher/GroovyLauncher.java" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/loaderObjects/RequestWorker.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/loaderObjects/Sentinel.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/loaderObjects/Signal.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/loaderObjects/WorkerInterface.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c23/loaderObjects/WorkerObject.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24.sourceFiles/2bibles.txt" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24.sourceFiles/4bibles.txt" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24.sourceFiles/ACM.txt" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24.sourceFiles/TMM.txt" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24.sourceFiles/WaD.txt" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24.sourceFiles/bible.txt" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/dataRecords/MapEntry.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/dataRecords/MergeFileData.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/dataRecords/PartConcordance.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/dataRecords/Sentinel.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/dataRecords/SequenceBlock.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/dataRecords/WordBlock.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/hostNodeProcesses/HostProcess.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/hostNodeProcesses/InitialInteraction.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/hostNodeProcesses/NodeProcess.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/launcher/GroovyLauncher.java" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/launcher/RunHost.bat" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/launcher/RunNode.bat" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/loadedProcesses/LoadedMerger.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/loadedProcesses/LoadedNode.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/loadedProcesses/LoadedReader.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/loaderObjects/RequestWorker.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/loaderObjects/Sentinel.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/loaderObjects/Signal.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/loaderObjects/WorkerInterface.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/loaderObjects/WorkerObject.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/processes/Merger.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/processes/Node.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/processes/Reader.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/processes/RunOneCPU.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/processes/Sorter.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/processes/Worker.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/processes/parExtractUniqueSequences.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/Distributed/processes/parMultiSequencer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/SingleMachine/mainScript/RunParConcordance.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/SingleMachine/mainScript/SeqConcordance.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/SingleMachine/methods/defs.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/SingleMachine/methods/defsWithComments.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/SingleMachine/supportProcesses/parExtractConcordance.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/SingleMachine/supportProcesses/parFindEqualKeys.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c24/SingleMachine/supportProcesses/parSequencer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/ClaimPair.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/Controller.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/ControllerInterface.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/ControllerManager.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/EnrolDetails.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/EnrolPlayer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/GameDetails.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/GetGameDetails.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/GetValidPoint.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/Interactions_within_the_Pairs_Game.pdf" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/Matcher.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/MouseBuffer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/MousePoint.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/Player.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/PlayerInterface.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/PlayerManager.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/RunController.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/RunPlayer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/SquareCoords.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/examples/c25/WithdrawFromGame.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c2/Consumer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c2/CreateSetsOfEight.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c2/GenerateSetsOfThree.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c2/ListToStream.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c2/Multiplier.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c2/RunMultiplier.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c2/RunThreeToEight.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c3/Differentiate.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c3/DifferentiateNeg.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c3/GPairs.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c3/GSCopy.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c3/GSPairsA.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c3/GSPairsB.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c3/GSquares.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c3/Minus.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c3/Negator.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c3/TestDifferentiate.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c3/TestDifferentiateNeg.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c3/TestGSCopy.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c4/ResetNumbers.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c4/ResetSuccessor.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c4/RunReset.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c5/RunScaler.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c5/Scale.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c9/Blender.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c9/Hopper.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c9/Manager1Only.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c9/Manager2Only.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c9/ManagerAll3.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c9/RunMixer1Only.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c9/RunMixer2Only.groovy" beforeDir="false" />
-      <change beforePath="H:/src/main/groovy/exercises/c9/RunMixerAll3.groovy" beforeDir="false" />
-      <change beforePath="H:/src/test/groovy/sanityCheck/Consumer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/test/groovy/sanityCheck/Producer.groovy" beforeDir="false" />
-      <change beforePath="H:/src/test/groovy/sanityCheck/TestProducerConsumer.groovy" beforeDir="false" />
+    <list default="true" id="ba6cd466-9f52-4426-a41b-4e6aa8bda4bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/exercises/c2/SetsOfEightTest.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__bsf_bsf_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_48.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_thoughtworks_qdox_qdox_1_12_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__cspforjava_jcsp_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__groovyJCSP_groovyJCSP_1_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__info_picocli_picocli_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__jline_jline_2_14_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_ant_ant_1_10_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_ant_ant_antlr_1_10_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_ant_ant_junit_1_10_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_ant_ant_launcher_1_10_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_ant_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_bsf_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_cli_picocli_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_console_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_datetime_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_dateutil_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_docgenerator_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_groovydoc_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_groovysh_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_jmx_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_json_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_jsr223_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_macro_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_nio_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_servlet_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_sql_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_swing_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_templates_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_test_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_test_junit5_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_testng_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_xml_3_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_launcher_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_testng_testng_6_9_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/UCaPE.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/UCaPE_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/UCaPE_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c2/CreateSetsOfEight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/exercises/c2/CreateSetsOfEight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/exercises/c2/CreateSetsOfEight.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/exercises/c2/CreateSetsOfEight.groovy" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
-    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -486,128 +80,150 @@
     </projectState>
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-1698245029">
+    <session id="1144119259">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.6" value="3" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="groovy" value="56" />
-          <entry key="java" value="2" />
+          <entry key="groovy" value="28" />
+          <entry key="java" value="1" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="56" />
-          <entry key="JAVA" value="2" />
+          <entry key="Groovy" value="28" />
+          <entry key="JAVA" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="groovy" value="1652" />
+          <entry key="groovy" value="1199" />
+          <entry key="java" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="1652" />
+          <entry key="Groovy" value="1199" />
+          <entry key="JAVA" value="26" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c4/ResetSuccessor.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c04/ResetPrefix.groovy">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c06/QueueTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c5/RunScaler.groovy">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c06/QProducerForTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+            <state relative-caret-position="408">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c4/RunReset.groovy">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c05/QConsumer.groovy">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/GenerateSetsOfThree.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="374">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c04/ResetUser.groovy">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/CreateSetsOfEight.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="357">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/Producer.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+              <folding>
+                <element signature="e#22#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c5/Scale.groovy">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/SetsOfEightTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#22#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c05/ScaledData.groovy">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/Multiplier.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="68">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c05/RunQueue.groovy">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/ListToStream.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="340">
+              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c05/RunScaler.groovy">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c06/QConsumerForTest.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/RunThreeToEight.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="H:/" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -802,10 +418,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6199085986000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="1288696022" />
-        <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2007532874" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="3653689111" />
       </map>
     </option>
@@ -912,30 +526,14 @@
         </entry>
       </map>
     </option>
-    <option name="projectSyncType">
-      <map>
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
-      </map>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c2/CreateSetsOfEightTestCase.java" />
+        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c2/RunThreeToEight.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/exercises/c2/CreateSetsOfEight.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c3/GSCopy.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c3/Minus.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/examples/c03/TestGIntegrate.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c3/Negator.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c3/Differentiate.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c3/DifferentiateNeg.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c4/RunReset.java" />
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c4/RunReset.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c4/ResetNumbers.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/examples/c05/RunQueue.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c4/ResetSuccessor.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/examples/c04/ResetPrefix.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c5/RunScaler.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c5/Scale.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c2/SetsOfEightTest.groovy" />
       </list>
     </option>
   </component>
@@ -957,51 +555,77 @@
     <option name="width" value="2580" />
     <option name="height" value="1410" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="UCaPE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParallelProgramming" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ParallelGit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelGit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="UCaPE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParallelProgramming" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ParallelGit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelGit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="UCaPE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParallelProgramming" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ParallelGit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelGit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="UCaPE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParallelProgramming" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ParallelGit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelGit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="groovy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="UCaPE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParallelProgramming" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ParallelGit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelGit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="groovy" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ParallelGit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelGit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="groovy" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="c06" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ParallelGit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelGit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="groovy" type="462c0819:PsiDirectoryNode" />
               <item name="exercises" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="UCaPE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParallelProgramming" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="ParallelGit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelGit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="groovy" type="462c0819:PsiDirectoryNode" />
+              <item name="exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="c2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ParallelGit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelGit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="groovy" type="462c0819:PsiDirectoryNode" />
@@ -1012,14 +636,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550232168888" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550836600270" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -1037,78 +659,56 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Groovy.RunScaler">
-    <configuration name="RunReset" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exercises.c4.RunReset" />
+  <component name="RunManager" selected="JUnit.SetsOfEightTest">
+    <configuration name="RunThreeToEight" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="UCaPE_main" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/RunThreeToEight.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/exercises/c2" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QueueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UCaPE_main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exercises.c4.*" />
+          <option name="PATTERN" value="examples.c06.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="examples.c06" />
+      <option name="MAIN_CLASS_NAME" value="examples.c06.QueueTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunQueue" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+    <configuration name="SetsOfEightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UCaPE_main" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/examples/c05/RunQueue.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/examples/c05" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunReset (1)" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="UCaPE_main" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/exercises/c4/RunReset.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/exercises/c4" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunReset" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="UCaPE_main" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/examples/c04/RunReset.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/examples/c04" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunScaler" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="UCaPE_main" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/exercises/c5/RunScaler.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/exercises/c5" />
-      <setting name="debug" value="false" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exercises.c2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="exercises.c2" />
+      <option name="MAIN_CLASS_NAME" value="exercises.c2.SetsOfEightTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Groovy.RunReset" />
-      <item itemvalue="Application.RunReset" />
-      <item itemvalue="Groovy.RunReset (1)" />
-      <item itemvalue="Groovy.RunScaler" />
-      <item itemvalue="Groovy.RunQueue" />
+      <item itemvalue="Groovy.RunThreeToEight" />
+      <item itemvalue="JUnit.QueueTest" />
+      <item itemvalue="JUnit.SetsOfEightTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Groovy.RunScaler" />
-        <item itemvalue="Groovy.RunReset" />
-        <item itemvalue="Groovy.RunReset (1)" />
-        <item itemvalue="Groovy.RunQueue" />
-        <item itemvalue="Application.RunReset" />
+        <item itemvalue="JUnit.SetsOfEightTest" />
+        <item itemvalue="Groovy.RunThreeToEight" />
+        <item itemvalue="JUnit.QueueTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1117,64 +717,84 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f8e8573c-87e0-465b-aab0-84f2230d8e57" name="Default Changelist" comment="" />
-      <created>1548410285232</created>
+      <changelist id="ba6cd466-9f52-4426-a41b-4e6aa8bda4bb" name="Default Changelist" comment="" />
+      <created>1550831382808</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1548410285232</updated>
-      <workItem from="1548410287969" duration="6310000" />
-      <workItem from="1549015660750" duration="6610000" />
-      <workItem from="1549621193612" duration="3969000" />
-      <workItem from="1550225457379" duration="5936000" />
-      <workItem from="1550830059167" duration="742000" />
+      <updated>1550831382808</updated>
+      <workItem from="1550831384364" duration="5212000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23567000" />
+  <component name="TestHistory">
+    <history-entry file="SetsOfEightTest - 2019.02.22 at 11h 44m 07s.xml">
+      <configuration name="SetsOfEightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SetsOfEightTest - 2019.02.22 at 11h 44m 48s.xml">
+      <configuration name="SetsOfEightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SetsOfEightTest - 2019.02.22 at 11h 45m 20s.xml">
+      <configuration name="SetsOfEightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SetsOfEightTest - 2019.02.22 at 11h 46m 13s.xml">
+      <configuration name="SetsOfEightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SetsOfEightTest - 2019.02.22 at 11h 47m 09s.xml">
+      <configuration name="SetsOfEightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SetsOfEightTest - 2019.02.22 at 11h 47m 31s.xml">
+      <configuration name="SetsOfEightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SetsOfEightTest - 2019.02.22 at 11h 49m 03s.xml">
+      <configuration name="SetsOfEightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SetsOfEightTest - 2019.02.22 at 11h 50m 19s.xml">
+      <configuration name="SetsOfEightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SetsOfEightTest - 2019.02.22 at 11h 50m 40s.xml">
+      <configuration name="SetsOfEightTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SetsOfEightTest - 2019.02.22 at 11h 55m 59s.xml">
+      <configuration name="SetsOfEightTest" configurationId="JUnit" />
+    </history-entry>
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14935064" />
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24975026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Build" weight="0.32930514" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32930514" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32930514" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32930514" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.33333334" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4995005" visible="true" weight="0.32930514" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5004995" side_tool="true" weight="0.32930514" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4995005" weight="0.32930514" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32930514" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1184,95 +804,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c03/TestGNumbers.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c3/GPairs.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c3/DifferentiateNeg.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/RunMultiplier.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/Consumer.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/RunThreeToEight.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/Producer.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/Multiplier.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/GenerateSetsOfThree.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/ListToStream.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/CreateSetsOfEight.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c3/TestGSCopy.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/groovyJCSP/groovyJCSP/1.1.3/573ed17879a15b4c9417b4f12b3cd6490049bdb5/groovyJCSP-1.1.3-sources.jar!/groovyJCSP/plugAndPlay/GPrint.groovy" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/groovyJCSP/groovyJCSP/1.1.3/573ed17879a15b4c9417b4f12b3cd6490049bdb5/groovyJCSP-1.1.3-sources.jar!/groovyJCSP/plugAndPlay/GIntegrate.groovy" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/groovyJCSP/groovyJCSP/1.1.3/573ed17879a15b4c9417b4f12b3cd6490049bdb5/groovyJCSP-1.1.3-sources.jar!/groovyJCSP/plugAndPlay/GPlus.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c3/TestDifferentiate.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="e#22#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c3/Differentiate.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c03/TestGIntegrate.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1283,139 +818,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c3/GSCopy.groovy">
+    <entry file="file://$PROJECT_DIR$/ParallelProcessingLogBook.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="e#22#40#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-5275" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c3/Minus.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c3/Negator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c3/TestDifferentiateNeg.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cspforjava/jcsp/1.1.0/92df574ad4ff24237f1d6acfc8d68e023cc3c57b/jcsp-1.1.0-sources.jar!/jcsp/lang/ParThread.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c3/DifferentiateNeg.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c3/GSPairsA.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c04/RunReset.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c04/ResetNumbers.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c05/QProducer.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c4/ResetNumbers.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c4/ResetSuccessor.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c04/ResetPrefix.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c5/RunScaler.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c4/RunReset.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c05/QConsumer.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c04/ResetUser.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c05/ScaledData.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c05/RunQueue.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c05/RunScaler.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c5/Scale.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+        <state relative-caret-position="958">
+          <caret line="61" column="63" lean-forward="true" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/CreateSetsOfEightTestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/RunMultiplier.groovy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c05/Queue.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/Producer.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="e#22#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/Multiplier.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/ListToStream.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/GenerateSetsOfThree.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/CreateSetsOfEight.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/RunThreeToEight.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c06/QProducerForTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c06/QueueTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c06/QConsumerForTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/SetsOfEightTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#22#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

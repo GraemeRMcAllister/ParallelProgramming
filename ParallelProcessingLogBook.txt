@@ -1,0 +1,343 @@
+		 
+Exercise 2.1:
+
+	def processList = [ new Producer ( outChannel: connect1.out() ),
+                    new Multiplier ( inChannel: connect1.in(), outChannel: connect2.out(), factor: 4),
+                    new Consumer ( inChannel: connect2.in() )
+                  ]
+
+    while (i > 0) {
+      // write i * factor to outChannel
+      // read in the next value of i
+      outChannel.write(i * factor)
+      i = inChannel.read()
+    }
+	
+	while ( i > 0 ) {
+      //insert a modified println statement
+      println "The multiplied value is $i"
+      i = inChannel.read()
+    }
+	
+
+Outputs:
+
+	next: 4
+	next: The multiplied value is 16
+	2
+	next: The multiplied value is 8
+	0
+	Finished
+
+	Process finished with exit code 0
+	
+	
+Exercise 2.2:
+
+		def threeList = [
+		                 [1, 2, 3], 
+		                 [4, 5, 6], 
+		                 [7, 8, 9], 
+		                 [10, 11, 12], 
+		                 [13, 14, 15], 
+		                 [16, 17, 18],
+		                 [19, 20, 21], 
+		                 [22, 23, 24],
+						  [-1, -1,-1]]
+		for ( i in 0 ..< threeList.size)outChannel.write(threeList[i])
+		//write the terminating List as per exercise definition
+		
+		OR
+		
+		def threeList = [
+		                 [1, 2, 3], 
+		                 [4, 5, 6], 
+		                 [7, 8, 9], 
+		                 [10, 11, 12], 
+		                 [13, 14, 15], 
+		                 [16, 17, 18],
+		                 [19, 20, 21], 
+		                 [22, 23, 24]]
+		for ( i in 0 ..< threeList.size)outChannel.write(threeList[i])
+		outChannel.write([-1,-1,-1])
+		
+		
+	    def inList = inChannel.read()
+		while (inList[0] != -1) {
+			// hint: output	list elements as single integers
+			for ( i in inList){
+				outChannel.write(i)
+			}
+			inList = inChannel.read()
+		}
+		outChannel.write(-1)
+		
+		
+		
+		
+	    def outList = []
+		def v = inChannel.read()
+		while (v != -1){
+			for ( i in 0 .. 7 ) {
+				// put v into outList and read next input
+				outList.add(v)
+				v = inChannel.read()
+			}
+			println " Eight Object is ${outList}"
+			outList = []
+		}
+		println "Finished"
+		
+Outputs:
+
+		Eight Object is [1, 2, 3, 4, 5, 6, 7, 8]
+		Eight Object is [9, 10, 11, 12, 13, 14, 15, 16]
+		Eight Object is [17, 18, 19, 20, 21, 22, 23, 24]
+		Finished
+
+		Process finished with exit code 0
+		
+
+Exercise 3.1:
+		
+		Minus:
+			    while (true) {
+					parRead2.run()
+					// output one value subtracted from the other
+					// be certain you know which way round you are doing the subtraction!!
+					outChannel.write(read0.value - read1.value)
+
+				}
+		
+		Differentiate:
+		    def differentiateList = [ new GPrefix ( prefixValue: 0, 
+    		                                inChannel: b.in(), 
+    		                                outChannel: c.out() ),
+                              new GPCopy ( inChannel: inChannel,  
+                            		       outChannel0: a.out(), 
+                            		       outChannel1: b.out() ),
+                              // insert a constructor for Minus
+                              new Minus( inChannel0: a.in(), inChannel1: c.in(),
+                                         outChannel: outChannel)
+ 							]
+		Outputs:
+				Differentiated Numbers
+				0
+				1
+				2
+				3
+				4
+				5
+				6
+				7
+				8
+				9
+				10
+				11
+				12
+				13
+				14
+				15
+				...
+
+				Process finished with exit code -1
+		
+		
+
+		DifferentiateNeg:
+		
+			def differentiateList = [ new GPrefix ( prefixValue: 0, 
+												inChannel: b.in(), 
+												outChannel: c.out() ),
+								  new GPCopy ( inChannel: inChannel,  
+											   outChannel0: a.out(), 
+											   outChannel1: b.out() ),
+								  //insert a constructor for Negator
+								  new Negator( inChannel: c.in(),
+											   outChannel: d.out()),
+								  new GPlus  ( inChannel0: a.in(), 
+											   inChannel1: d.in(), 
+											   outChannel: outChannel ) 
+								]
+		
+		Negator:
+			 while (true) {
+				  //output the negative of the input value
+				  def num = inChannel.read()
+				  outChannel.write( num * -1 )
+				}
+			  }
+		
+		
+		Outputs:
+				Differentiated Numbers
+				0
+				1
+				2
+				3
+				4
+				5
+				6
+				7
+				8
+				9
+				10
+				11
+				12
+				13
+				14
+				15
+				...
+
+				Process finished with exit code -1
+
+				
+				
+Exercise 4.1:
+		- Now when you input a new value in the reset value generator it starts a new counter from 0 but maintains the original counter which has started from 1000
+		- However if you enter in a second reset value it causes a deadlock. This means there is no value coming from GSuccessor to ResetPrefix. This is caused because we have
+		  removed the output channel between GSuccessor and ResetPrefix. Once all the Processes are full with numbers the processes cannot output and thus the deadlock is caused.
+
+Exercise 4.2:
+		ResetSuccessor:
+				while (true) {
+				  // deal with inputs from resetChannel and inChannel
+					def index = alt.priSelect()
+					if (index == 0 ) {    // resetChannel input
+						def resetValue = resetChannel.read()
+						resetChannel.read()
+						outChannel.write(resetValue)
+					}else {
+						outChannel.write(inChannel.read() + 1)
+					}
+				}
+			   
+		
+		ResetNumbers:
+			new ResetSuccessor(inChannel: b.in(), outChannel: c.out(), resetChannel: resetChannel)
+		
+		Conclusion: 
+			- We still have still not fixed the issue caused in 4.2 because there is still no channel between GPrefix and ResetSuccessor and thus the same deadlock as in 4.1 is caused because
+			  eventually when the we enter the second reset number all the processes are filled with numbers and cannot output to each other.
+                 
+		
+Exercise 5.1:
+		Output With Delay on QProducer at 1000 ms and QConsumer with a delay of 0 ms:
+		
+				QProducer has started
+				QConsumer has started
+				QConsumer has read 1
+				QConsumer has read 2
+				QConsumer has read 3
+				...
+				QConsumer has read 50
+				Q finished
+				QConsumer has read null
+
+				Process finished with exit code 0
+			
+		Output With Delay on QConsumer at 1000ms and QProducer with a delay of 0 ms:
+		
+				QProducer has started
+				QConsumer has started
+				QConsumer has read 1
+				QConsumer has read 2
+				QConsumer has read 3
+				...
+				QConsumer has read 50
+				Q finished
+				QConsumer has read null
+
+				Process finished with exit code 0
+		
+		Conclusion:
+			It does not matter what process you add the delay to because they both run in parallel and work in sync if one is delayed the other will also have a delay to it. 
+
+Exercise 5.2:
+	Output:
+			Original      Scaled
+		 0		0
+		 1		2
+		 2		4
+		 3		6
+		 4		8
+		Normal Timer: new scaling timer is 4
+		 5		20
+		Suspended
+		 6		6
+		New scaling: 5
+		 7		35
+		 8		40
+		 9		45
+		 10		50
+		 11		55
+		Normal Timer: new scaling timer is 10
+		 12		120
+		Suspended
+		 13		13
+		New scaling: 11
+		 14		154
+		 15		165
+		 16		176
+		 17		187
+		 18		198
+		Normal Timer: new scaling timer is 22
+		 19		418
+		Suspended
+		 20		20
+		New scaling: 23
+		 21		483
+		 22		506
+		 23		529
+		 24		552
+		 25		575
+	
+	
+	Scale Code:
+	   while (true) {
+			  switch ( scaleAlt.priSelect(preCon) ) {
+				case SUSPEND :
+				  //  deal with suspend input
+				  preCon[SUSPEND] = false
+				  suspended = true
+				  println "Suspended"
+				  suspend.read()
+				  factor.write(scaling)
+				  preCon[INJECT] = true
+				  break
+				case INJECT:
+				  //  deal with inject input
+				  preCon[INJECT] = false
+				  preCon[SUSPEND] = true
+				  suspended = false
+				  scaling = injector.read()
+				  println "New scaling: $scaling"
+				  timeout = timer.read() + DOUBLE_INTERVAL
+				  timer.setAlarm( timeout )
+				  break
+				case TIMER:
+				  //  deal with Timer input
+				  timeout = timer.read() + DOUBLE_INTERVAL
+				  timer.setAlarm( timeout )
+				  scaling = scaling * 2
+				  println "Normal Timer: new scaling timer is $scaling"
+				  break
+				case INPUT:
+				  //   deal with Input channel
+				  def inValue = inChannel.read()
+				  def result = new ScaledData()
+				  if( suspended == true ) {
+					result.original = inValue
+					result.scaled = inValue
+				  }
+				  else {
+					result.original = inValue
+					result.scaled = inValue * scaling
+				  }
+				  outChannel.write( result )
+				  break
+			  } //end-switch
+			} //end-while
+		  } //end-run
+	
+		
