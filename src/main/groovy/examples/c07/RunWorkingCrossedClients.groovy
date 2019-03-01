@@ -16,7 +16,7 @@ def S02C0send = Channel.one2one()
 def C12S1request = Channel.one2one()
 def S12C1send = Channel.one2one()
 
-def server0Map = [1:10,2:20,3:30,4:40,5:50,6:60,7:70,8:80,9:90,10:100]
+def server0Map = [1:10,2:20,3:50,4:40,5:50,6:60,7:70,8:80,9:90,10:100]
 def server1Map = [11:110,12:120,13:130,14:140,15:150,
 	              16:160,17:170,18:180,19:190,20:200]
 
@@ -39,7 +39,7 @@ def server0 = new Server ( clientRequest: C02S0request.in(),
                             thisServerReceive: S12S0send.in(),
                             otherServerRequest: S12S0request.in(),
                             otherServerSend: S02S1send.out(),
-                            dataMap: server0Map)
+                            dataMap: server0Map, serverNumber: 1)
 
 def server1 = new Server ( clientRequest: C12S1request.in(),
                             clientSend: S12C1send.out(),
@@ -47,7 +47,7 @@ def server1 = new Server ( clientRequest: C12S1request.in(),
                             thisServerReceive: S02S1send.in(),
                             otherServerRequest: S02S1request.in(),
                             otherServerSend: S12S0send.out(),
-                            dataMap: server1Map)
+                            dataMap: server1Map, serverNumber: 2)
 
 def network = [client0, client1, server0, server1]
 new PAR (network).run()

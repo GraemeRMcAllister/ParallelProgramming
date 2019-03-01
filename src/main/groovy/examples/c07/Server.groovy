@@ -15,7 +15,8 @@ class Server implements CSProcess{
   def ChannelInput thisServerReceive  
   def ChannelInput otherServerRequest
   def ChannelOutput otherServerSend  
-  def dataMap = [ : ]    
+  def dataMap = [ : ]
+  def serverNumber
                 
   void run () {
     def CLIENT = 0
@@ -30,22 +31,34 @@ class Server implements CSProcess{
       switch (index) {		  
         case CLIENT :
           def key = clientRequest.read()
-          if ( dataMap.containsKey(key) ) 
-            clientSend.write(dataMap[key])          
-          else 
+          println "CLIENT REQUEST Sever: $serverNumber clients request $key Datamap: $dataMap"
+          if ( dataMap.containsKey(key) ) {
+            clientSend.write(dataMap[key])
+            println "CLIENT REQUEST Sever: $serverNumber Data map contains $key writing " + dataMap[key] + " to client " +
+                    "Server $serverNumber has datamap $dataMap"
+          }else {
             thisServerRequest.write(key)
+            println "CLIENT REQUEST Sever: $serverNumber Data map does not contain $key writing $key to client " +
+                    "Datamap: $dataMap"
+          }
           //end if 
           break
         case OTHER_REQUEST :
           def key = otherServerRequest.read()
-          if ( dataMap.containsKey(key) ) 
-            otherServerSend.write(dataMap[key])          
-          else 
+          println "OTHER_REQUEST Reading clients request $key Datamap: $dataMap"
+          if ( dataMap.containsKey(key) ) {
+            otherServerSend.write(dataMap[key])
+            println "OTHER_REQUEST Data map contains $key writing " + dataMap[key] + " to client Server: $serverNumber " +
+                    "has datamap $dataMap"
+          }else {
             otherServerSend.write(-1)
-          //end if 
+            println "OTHER_REQUEST Data map does not contain $key writing -1. Datamap: $dataMap"
+          }
+          //end if
           break
         case THIS_RECEIVE :
           clientSend.write(thisServerReceive.read() )
+          println "THIS_RECEIVE Server $serverNumber Recieveing A Value Datamap: $dataMap"
           break
       } // end switch              
     } //end while   

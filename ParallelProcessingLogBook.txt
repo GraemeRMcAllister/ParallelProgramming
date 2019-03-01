@@ -339,5 +339,109 @@ Exercise 5.2:
 			  } //end-switch
 			} //end-while
 		  } //end-run
+		  
+
+Exercise 6.1:
+	GenerateSetsOfEight:
+		class CreateSetsOfEight implements CSProcess{
 	
-		
+		def ChannelInput inChannel
+		def ChannelOutput outChannel
+		def outList = []
+		def allLists = []
+		void run(){
+			def v = inChannel.read()
+			while (v != -1){
+				outList = []
+				for ( i in 0 .. 7 ) {
+					// put v into outList and read next input
+					outList.add(v)
+					v = inChannel.read()
+				}
+				println " Eight Object is ${outList}"
+				allLists.add(outList)
+			}
+			println "Finished"
+		}
+	
+	
+	SetsOfEightTest is a new JCSP Class file:
+	
+		class SetsOfEightTest extends GroovyTestCase {
+		void testMessage() {
+			One2OneChannel connect1 = Channel.createOne2One()
+			One2OneChannel connect2 = Channel.createOne2One()
+			One2OneChannel toTest = Channel.createOne2One()
+			def generateSetsOfThree = new GenerateSetsOfThree( outChannel: connect1.out() )
+			def listToStream = new ListToStream( inChannel: connect1.in(), outChannel: connect2.out() )
+			def setsOfEight = new CreateSetsOfEight( inChannel: connect2.in(), outChannel: toTest.out())
+			def processList = [generateSetsOfThree, listToStream, setsOfEight]
+
+			new PAR(processList).run()
+
+			def expected = [[1, 2 , 3, 4, 5, 6, 7, 8], [9, 10, 11, 12, 13, 14, 15, 16], [17, 18, 19, 20, 21, 22, 23, 24]]
+			def actual = setsOfEight.allLists
+			assertTrue(actual == expected)
+		}
+	}
+	
+	Output:
+		 Eight Object is [1, 2, 3, 4, 5, 6, 7, 8]
+		 Eight Object is [9, 10, 11, 12, 13, 14, 15, 16]
+		 Eight Object is [17, 18, 19, 20, 21, 22, 23, 24]
+		Finished
+
+		Process finished with exit code 0
+
+
+
+Exercise 7.1:
+
+	Output:
+	
+THIS_RECEIVE Server 1 Recieveing A Value Datamap: [1:10, 2:20, 3:30, 4:40, 5:50, 6:60, 7:70, 8:80, 9:90, 10:100]
+OTHER_REQUEST Data map contains 15 writing 150 to client Server: 2 has datamap [11:110, 12:120, 13:130, 14:140, 15:150, 16:160, 17:170, 18:180, 19:190, 20:200]
+Client 0 is requesting 16
+Client 1 is requesting 6
+CLIENT REQUEST Sever: 1 clients request 16 Datamap: [1:10, 2:20, 3:30, 4:40, 5:50, 6:60, 7:70, 8:80, 9:90, 10:100]
+CLIENT REQUEST Sever: 2 clients request 6 Datamap: [11:110, 12:120, 13:130, 14:140, 15:150, 16:160, 17:170, 18:180, 19:190, 20:200]
+
+
+
+
+
+	Conclusion:
+
+
+By adding the print statements in both the client and server classes we can see which client is requesting the data and what they are requesting. We can also tell which server has received the request and what values they currently have in their datamap. From this we can see that if both servers do not have the value needed by the client and they need to transfer the data to each other and therefore both servers will be acting as a client requesting at the same time causing the deadlock.
+
+Exercise 8-1:
+
+for ( i in 0 ..< iterations) {
+  def key = selectList[i]
+  requestChannel.write(key)
+  println "Client $clientNumber is requesting $key"
+  def v = receiveChannel.read()
+  println "Client $clientNumber is recieving $v"
+  if( key == v / 10 )
+    println "Server returned correct value. " + key + ":" + v
+  else
+    println "Server returned incorrect value. " + key + ":" + v
+}
+
+
+Output for correct value received:
+
+Client 1 is recieving 140
+CLIENT REQUEST Sever: 2 Data map contains 14 writing 140 to client Server 2 has datamap [11:110, 12:120, 13:130, 14:140, 15:150, 16:160, 17:170, 18:180, 19:190, 20:200]
+Server returned correct value. 14:140
+
+Output for incorrect value received:
+
+Client 1 is requesting 13
+Client 0 is recieving 50
+CLIENT REQUEST Sever: 1 Data map contains 3 writing 50 to client Server 1 has datamap [1:10, 2:20, 3:50, 4:40, 5:50, 6:60, 7:70, 8:80, 9:90, 10:100]
+
+CLIENT REQUEST Sever: 2 clients request 13 Datamap: [11:110, 12:120, 13:130, 14:140, 15:150, 16:160, 17:170, 18:180, 19:190, 20:200]
+Server returned incorrect value. 3:50
+
