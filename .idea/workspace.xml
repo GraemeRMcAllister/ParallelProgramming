@@ -1,20 +1,574 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02b1c555-6543-4d44-99cf-0ce7748ffa78" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Para.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="aefb0d56-5567-4b42-9c18-31965c29baaa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/examples/c25/turnOver.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Para.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c02/ConsumeHello.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c02/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c02/ProduceHN.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c02/ProduceHW.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c02/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c02/RunHelloName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c02/RunHelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c02/RunProducerConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c03/TestFibonacciV1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c03/TestFibonacciV2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c03/TestGIntegrate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c03/TestGNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c03/TestGParPrint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c03/TestGSquares.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c04/ResetNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c04/ResetPrefix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c04/ResetUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c04/RunReset.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c05/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c05/QConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c05/QProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c05/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c05/RunQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c05/RunScaler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c05/Scale.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c05/ScaledData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c06/ConsumeHelloForTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c06/HelloWorldTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c06/QConsumerForTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c06/QProducerForTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c06/QueueTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c07/BadC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c07/BadP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c07/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c07/RunBadPC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c07/RunDeadlockedCrossedClients.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c07/RunWorkingCrossedClients.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c07/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c08/CSMux.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c08/RunManyClientsWithTwoServers$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c08/RunManyClientsWithTwoServers$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c08/RunManyClientsWithTwoServers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c08/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/EventData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/EventGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/EventHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/EventOWBuffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/EventProcessing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/EventPrompter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/EventReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/EventSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/EventStream$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/EventStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/RunMultiStream$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/RunMultiStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/RunSingleStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c09/UniformlyDistributedDelay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Elementv0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Elementv1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Elementv2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/ExtraElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/ExtraElementv1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/ExtraElementv2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Receiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/RingElementv0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/RingElementv1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/RingElementv2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/RingPacket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Runv0$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Runv0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Runv1$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Runv1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Runv1a$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Runv1a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Runv2$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Runv2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c10/Sender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c11/Particle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c11/ParticleInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c11/ParticleManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c11/Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c11/RunParticles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c11/UserInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/Chef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/Clock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/ClockedQueuingServery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/InstantCanteen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/InstantServery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/Kitchen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/Philosopher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/PhilosopherBehaviour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/QueuingCanteen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/QueuingServery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/RunClockedQueuingCollege$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/RunClockedQueuingCollege.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/RunInstantCollege$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/RunInstantCollege.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/RunQueuingCollege$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/canteen/RunQueuingCollege.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/fork/Butler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/fork/Fork.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/fork/LazyButler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/fork/Philosopher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/fork/RunCollege$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/fork/RunCollege$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/fork/RunCollege.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/fork/RunLazyCollege$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/fork/RunLazyCollege$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c12/fork/RunLazyCollege.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c13/CrewMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c13/DataBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c13/DataObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c13/Read.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c13/ReadClerk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c13/RunDataBase$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c13/RunDataBase$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c13/RunDataBase$_run_closure3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c13/RunDataBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c13/Write.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c13/WriteClerk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c14/BarrierManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c14/DisplayController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c14/Gallery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c14/MouseBufferPreCon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c14/MouseBufferPrompt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c14/RunClickTest$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c14/RunClickTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c14/TargetController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c14/TargetFlusher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c14/TargetManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c14/TargetProcess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/Get.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/Put.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/Receiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/RunCanteen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/RunChef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/RunGet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/RunManyGet$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/RunManyGet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/RunPhil$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/RunPhil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/RunPut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/RunReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/RunSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net/Sender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/Get.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/Put.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/Receiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunCanteen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunChef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunDBMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunDBRead.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunDBWrite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunGet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunManyGet$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunManyGet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunPhilosophers$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunPhilosophers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunPut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunPutGet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/RunSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c15/net2/Sender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net/PrintJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net/PrintSpooler$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net/PrintSpooler$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net/PrintSpooler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net/PrintUser$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net/PrintUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net/Printline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net/RunPrintSpooler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net/RunPrintUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net2/PrintJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net2/PrintSpooler$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net2/PrintSpooler$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net2/PrintSpooler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net2/PrintUser$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net2/PrintUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net2/Printline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net2/RunPrintSpooler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c16/net2/RunPrintUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/counted/CountedData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/counted/CountedEvaluator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/counted/CountedSampledNetwork.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/counted/CountedSamplingTimer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/counted/CountingGatherer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/counted/CountingSampler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/counted/RunCountedSampledSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/flagged/DataGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/flagged/Evaluator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/flagged/FlaggedSystemData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/flagged/Gatherer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/flagged/RunSamplingSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/flagged/SampledNetwork.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/flagged/Sampler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/flagged/SamplingTimer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/flagged/SystemData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/sniff/Comparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/sniff/RunScalingComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/sniff/ScalingSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/sniff/Sniffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/sniff/SnifferComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/test/net/CollectNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/test/net/GenerateNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/test/net/RunScalingDevice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/test/net/RunTestPart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/test/net/ScalingDevice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/test/net2/CollectNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/test/net2/GenerateNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/test/net2/RunScalingDevice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/test/net2/RunTestPart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c17/test/net2/ScalingDevice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/Agent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/BackAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/BackRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/ForwardBackAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/ForwardBackRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/ProcessNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/Root.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/RunAgentSystem$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/RunAgentSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/RunBackRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/RunForwardBackRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/RunNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/RunRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/RunTripNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/RunTripRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/TripAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/TripNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net/TripRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/Agent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/BackAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/BackRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/ForwardBackAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/ForwardBackRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/ProcessNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/Root.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/RunAgentSystem$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/RunAgentSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/RunBackRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/RunForwardBackRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/RunNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/RunRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/RunTripNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/RunTripRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/TripAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/TripNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c18/net2/TripRoot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/UniversalClient/RunUC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/UniversalClient/UCCapability.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/UniversalClient/UCInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/accessServer/AccessCapability.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/accessServer/AccessInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/accessServer/AccessProcess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/accessServer/AccessServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/groupLocationService/GLcapability.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/groupLocationService/GLdata.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/groupLocationService/GLinterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/groupLocationService/GLprocess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/groupLocationService/GroupLocationServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/netObjects/ClientLocation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/netObjects/ClientRequestData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/serviceA/Aprocess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/serviceA/ServerA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/serviceB/Bprocess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/serviceB/ServerB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/serviceC/Cprocess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c19/net2/serviceC/ServerC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/AgentElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/AgentExtraElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/Prompter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/Receiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/RestartAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/RingAgentElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/RingPacket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/RunElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/RunExtraElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/RunNode1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/RunNode2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/RunNode3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/RunNode4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/Sender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/StateManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net/StopAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/AgentElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/AgentExtraElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/Prompter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/Receiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/RestartAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/RingAgentElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/RingPacket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/RunElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/RunExtraElementNode1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/RunNode2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/RunNode3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/RunNode4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/RunNode5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/RunNode6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/Sender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/StateManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c20/net2/StopAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/AdaptiveAgent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/AvailableNodeList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/DataGenList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/DataGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/DataGeneratorPrint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/Gatherer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/NodeProcess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/NodeProcessPrint$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/NodeProcessPrint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/RunDataGen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/RunGatherer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/RunNode10000.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/RunNode20000.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/RunNode30000.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/RunNode40000.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/RunNodeAll.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/Type1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/Type1Process.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/Type2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/Type2Process.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/Type3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c21/net2/Type3Process.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/collector/Collector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/collector/CopyOfCollector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/collector/CopyOfRunCollector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/collector/RunCollector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/emitter/CopyOfEmitter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/emitter/CopyOfEmitterNet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/emitter/CopyOfManipulateInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/emitter/CopyOfRunEmitter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/emitter/CopyOfTestObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/emitter/Emitter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/emitter/EmitterNet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/emitter/ManipulateInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/emitter/RunEmitter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/emitter/TestObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/universalClasses/InitObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/universalClasses/Sentinel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/universalClasses/Signal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/worker/CopyOfBaseNet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/worker/CopyOfGetInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/worker/CopyOfRunBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/worker/CopyOfSendOutput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/worker/CopyOfWorker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/worker/DoWork.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/worker/GetInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/worker/RunWorker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/worker/SendOutput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c22/worker/Worker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/Collector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/DataObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/Emitter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/CopyOfRunArgMcPiHost$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/CopyOfRunArgMcPiHost$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/CopyOfRunArgMcPiHost$_run_closure3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/CopyOfRunArgMcPiHost$_run_closure4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/CopyOfRunArgMcPiHost$_run_closure5$_closure6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/CopyOfRunArgMcPiHost$_run_closure5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/CopyOfRunArgMcPiHost.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/CopyOfRunArgMcPiNode$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/CopyOfRunArgMcPiNode$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/CopyOfRunArgMcPiNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/McPiCollector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/McPiCore$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/McPiCore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/McPiEmitter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/McPiManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/McPiWorker$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/McPiWorker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunArgMcPiHost$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunArgMcPiHost$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunArgMcPiHost$_run_closure3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunArgMcPiHost$_run_closure4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunArgMcPiHost$_run_closure5$_closure6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunArgMcPiHost$_run_closure5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunArgMcPiHost.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunArgMcPiNode$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunArgMcPiNode$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunArgMcPiNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunMcPiHost$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunMcPiHost$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunMcPiHost$_run_closure3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunMcPiHost$_run_closure4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunMcPiHost$_run_closure5$_closure6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunMcPiHost$_run_closure5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunMcPiHost.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunMcPiNode$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunMcPiNode$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/RunMcPiNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/TestCollector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/TestEmitter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/TestMcPiNetwork.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/TestNetwork.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/TestWorker$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/MontecarloPi/TestWorker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/Mprocess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/RunHost$_run_closure1$_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/RunHost$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/RunHost.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/RunNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/Sprocess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/WProcess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/launcher/GroovyLauncher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/loaderObjects/RequestWorker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/loaderObjects/Sentinel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/loaderObjects/Signal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/loaderObjects/WorkerInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c23/loaderObjects/WorkerObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/dataRecords/MapEntry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/dataRecords/MergeFileData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/dataRecords/PartConcordance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/dataRecords/Sentinel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/dataRecords/SequenceBlock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/dataRecords/WordBlock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/hostNodeProcesses/HostProcess$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/hostNodeProcesses/HostProcess$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/hostNodeProcesses/HostProcess$_run_closure3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/hostNodeProcesses/HostProcess$_run_closure4$_closure5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/hostNodeProcesses/HostProcess$_run_closure4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/hostNodeProcesses/HostProcess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/hostNodeProcesses/InitialInteraction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/hostNodeProcesses/NodeProcess$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/hostNodeProcesses/NodeProcess$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/hostNodeProcesses/NodeProcess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/launcher/GroovyLauncher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/loadedProcesses/LoadedMerger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/loadedProcesses/LoadedNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/loadedProcesses/LoadedReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/loaderObjects/RequestWorker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/loaderObjects/Sentinel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/loaderObjects/Signal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/loaderObjects/WorkerInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/loaderObjects/WorkerObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Merger$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Merger$_run_closure2$_closure6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Merger$_run_closure2$_closure7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Merger$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Merger$_run_closure3$_closure8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Merger$_run_closure3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Merger$_run_closure4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Merger$_run_closure5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Merger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Node$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Reader$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Reader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/RunOneCPU$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/RunOneCPU$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/RunOneCPU.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Sorter$_run_closure1$_closure4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Sorter$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Sorter$_run_closure2$_closure5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Sorter$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Sorter$_run_closure3$_closure6$_closure7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Sorter$_run_closure3$_closure6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Sorter$_run_closure3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Sorter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Worker$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Worker$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Worker$_run_closure3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/Worker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/parExtractUniqueSequences.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/Distributed/processes/parMultiSequencer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/mainScript/RunParConcordance$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/mainScript/RunParConcordance$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/mainScript/RunParConcordance$_run_closure3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/mainScript/RunParConcordance$_run_closure4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/mainScript/RunParConcordance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/mainScript/SeqConcordance$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/mainScript/SeqConcordance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/methods/defs$_extractConcordance_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/methods/defs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/methods/defsWithComments$_extractConcordance_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/methods/defsWithComments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/supportProcesses/parExtractConcordance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/supportProcesses/parFindEqualKeys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c24/SingleMachine/supportProcesses/parSequencer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/ClaimPair.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/ControllerInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/ControllerManager$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/ControllerManager$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/ControllerManager$_run_closure3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/ControllerManager$_run_closure4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/ControllerManager$_run_closure5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/ControllerManager$_run_closure6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/ControllerManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/EnrolDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/EnrolPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/GameDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/GetGameDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/GetValidPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/Matcher$_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/Matcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/MouseBuffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/MousePoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/RunController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/RunPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/SquareCoords.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/WithdrawFromGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c2/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c2/CreateSetsOfEight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c2/GenerateSetsOfThree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c2/ListToStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c2/Multiplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c2/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c2/RunMultiplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c2/RunThreeToEight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c2/SetsOfEightTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c3/Differentiate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c3/DifferentiateNeg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c3/GPairs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c3/GSCopy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c3/GSPairsA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c3/GSPairsB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c3/GSquares.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c3/Minus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c3/Negator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c3/TestDifferentiate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c3/TestDifferentiateNeg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c3/TestGSCopy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c4/ResetNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c4/ResetSuccessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c4/RunReset.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c5/RunScaler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c5/Scale.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/Blender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/Hopper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/Manager1Only.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/Manager2Only.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/ManagerAll3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/RunMixer1Only$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/RunMixer1Only$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/RunMixer1Only.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/RunMixer2Only$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/RunMixer2Only$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/RunMixer2Only.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/RunMixerAll3$_run_closure1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/RunMixerAll3$_run_closure2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/exercises/c9/RunMixerAll3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/sanityCheck/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/sanityCheck/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/sanityCheck/TestProducerConsumer.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/examples/c25/GameDetails.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/examples/c25/GameDetails.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -30,31 +584,43 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="795872612">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="groovy" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Groovy" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="groovy" value="59" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Groovy" value="59" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="206" column="49" selection-start-line="206" selection-start-column="49" selection-end-line="206" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/SquareCoords.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="207" column="80" selection-start-line="207" selection-start-column="72" selection-end-line="207" selection-end-column="80" />
+            <state relative-caret-position="741">
+              <caret line="208" column="47" lean-forward="true" selection-start-line="208" selection-start-column="47" selection-end-line="208" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -62,90 +628,322 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/turnOver.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/GetGameDetails.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/GameDetails.groovy">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/Consumer.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/CreateSetsOfEight.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/RunThreeToEight.groovy">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/RunMultiplier.groovy">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>incorre</find>
-      <find>GameDetails</find>
-      <find>validPoint</find>
-      <find>getga</find>
-      <find>gamedet</find>
-      <find>insta</find>
-      <find>gamede</find>
-      <find>playerDetails</find>
-      <find>playerMap</find>
-    </findStrings>
-    <dirStrings>
-      <dir>C:\Users\enrik\IdeaProjects\Para\src\main\groovy\examples\c25</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="myGradleHomes">
+      <map>
+        <entry key="$PROJECT_DIR$" value="C:\Users\40322132\.gradle\wrapper\dists\gradle-4.8-bin\divx0s2uj4thofgytb7gf9fsi\gradle-4.8" />
+      </map>
+    </option>
+    <option name="myGradleVersions">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4.8" />
+      </map>
+    </option>
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="UCaPE" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="UCaPE" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'UCaPE'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'UCaPE'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in root project 'UCaPE'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'UCaPE'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the test Groovy source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestGroovy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'UCaPE'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles the main Groovy source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileGroovy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'UCaPE'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Groovydoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="groovydoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'UCaPE'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'UCaPE'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'UCaPE'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/.gradle" value="0" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="1288696022" />
+        <entry key="$PROJECT_DIR$/settings.gradle" value="3653689111" />
+      </map>
+    </option>
+    <option name="projectBuildClasspath">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$PROJECT_DIR$">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="UCaPE" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/ant-1.9.11.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/ant-launcher-1.9.11.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-base-services-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-base-services-groovy-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-build-cache-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-build-option-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-cli-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-core-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-core-api-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-docs-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-installation-beacon-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-jvm-services-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-kotlin-dsl-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-kotlin-dsl-provider-plugins-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-kotlin-dsl-provider-spi-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-kotlin-dsl-tooling-builders-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-kotlin-dsl-tooling-models-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-launcher-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-logging-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-messaging-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-model-core-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-model-groovy-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-native-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-persistent-cache-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-process-services-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-resources-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-runtime-api-info-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-tooling-api-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-wrapper-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/groovy-all-2.4.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-announce-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-antlr-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-build-cache-http-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-build-comparison-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-build-init-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-code-quality-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-composite-builds-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-dependency-management-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-diagnostics-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-ear-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-ide-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-ide-native-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-ide-play-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-ivy-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-jacoco-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-javascript-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-language-groovy-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-language-java-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-language-jvm-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-language-native-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-language-scala-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-maven-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-osgi-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-platform-base-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-platform-jvm-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-platform-native-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-platform-play-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-plugin-development-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-plugin-use-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-plugins-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-publish-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-reporting-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-resources-gcs-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-resources-http-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-resources-s3-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-resources-sftp-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-scala-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-signing-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-test-kit-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-testing-base-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-testing-junit-platform-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-testing-jvm-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-testing-native-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-tooling-api-builders-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-version-control-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/gradle-workers-4.8.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/plugins/ivy-2.2.0.jar" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c2/CreateSetsOfEight.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/exercises/c2/SetsOfEightTest.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/examples/c07/Server.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/examples/c07/RunDeadlockedCrossedClients.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/examples/c07/RunWorkingCrossedClients.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/examples/c07/Client.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/examples/c25/GameDetails.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/examples/c25/turnOver.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy" />
       </list>
@@ -164,10 +962,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="271" />
-    <option name="y" value="-23" />
+    <option name="x" value="161" />
+    <option name="y" value="-33" />
     <option name="width" value="1005" />
-    <option name="height" value="690" />
+    <option name="height" value="689" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -175,82 +973,44 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Para" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Para" type="462c0819:PsiDirectoryNode" />
+              <item name="ParallelProgramming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelProgramming" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="Para" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Para" type="462c0819:PsiDirectoryNode" />
-              <item name="gradle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Para" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Para" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Para" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Para" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Para" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Para" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Para" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Para" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Para" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Para" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="exercises" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Para" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Para" type="462c0819:PsiDirectoryNode" />
+              <item name="ParallelProgramming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelProgramming" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Para" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Para" type="462c0819:PsiDirectoryNode" />
+              <item name="ParallelProgramming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelProgramming" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="Para" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Para" type="462c0819:PsiDirectoryNode" />
+              <item name="ParallelProgramming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelProgramming" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="groovy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Para" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Para" type="462c0819:PsiDirectoryNode" />
+              <item name="ParallelProgramming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelProgramming" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="groovy" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Para" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Para" type="462c0819:PsiDirectoryNode" />
+              <item name="ParallelProgramming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParallelProgramming" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="groovy" type="462c0819:PsiDirectoryNode" />
@@ -261,13 +1021,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553010719716" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553015807628" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="android.dex.compiler" />
@@ -284,336 +1044,77 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RunController">
-    <configuration name="RunController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="examples.c25.RunController" />
-      <module name="UCaPE_main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="examples.c25.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunDeadlockedCrossedClients" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="UCaPE_main" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/examples/c07/RunDeadlockedCrossedClients.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/examples/c07" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunWorkingCrossedClients" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="UCaPE_main" />
-      <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/examples/c07/RunWorkingCrossedClients.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/src/main/groovy/examples/c07" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SetsOfEightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UCaPE_main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="exercises.c2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="exercises.c2" />
-      <option name="MAIN_CLASS_NAME" value="exercises.c2.SetsOfEightTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Groovy.RunDeadlockedCrossedClients" />
-      <item itemvalue="Groovy.RunWorkingCrossedClients" />
-      <item itemvalue="JUnit.SetsOfEightTest" />
-      <item itemvalue="Application.RunController" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.RunController" />
-        <item itemvalue="Groovy.RunWorkingCrossedClients" />
-        <item itemvalue="Groovy.RunDeadlockedCrossedClients" />
-        <item itemvalue="JUnit.SetsOfEightTest" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="02b1c555-6543-4d44-99cf-0ce7748ffa78" name="Default Changelist" comment="" />
-      <created>1551434900296</created>
+      <changelist id="aefb0d56-5567-4b42-9c18-31965c29baaa" name="Default Changelist" comment="" />
+      <created>1553015169685</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1551434900296</updated>
-      <workItem from="1551434905044" duration="5060000" />
+      <updated>1553015169685</updated>
+      <workItem from="1553015172658" duration="641000" />
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="SetsOfEightTest - 2019.03.01 at 10h 13m 42s.xml">
-      <configuration name="SetsOfEightTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SetsOfEightTest - 2019.03.01 at 10h 14m 31s.xml">
-      <configuration name="SetsOfEightTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SetsOfEightTest - 2019.03.01 at 10h 38m 30s.xml">
-      <configuration name="SetsOfEightTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SetsOfEightTest - 2019.03.01 at 10h 40m 24s.xml">
-      <configuration name="SetsOfEightTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SetsOfEightTest - 2019.03.01 at 10h 43m 00s.xml">
-      <configuration name="SetsOfEightTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SetsOfEightTest - 2019.03.01 at 10h 43m 19s.xml">
-      <configuration name="SetsOfEightTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SetsOfEightTest - 2019.03.01 at 10h 44m 26s.xml">
-      <configuration name="SetsOfEightTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SetsOfEightTest - 2019.03.01 at 10h 45m 16s.xml">
-      <configuration name="SetsOfEightTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SetsOfEightTest - 2019.03.01 at 10h 45m 36s.xml">
-      <configuration name="SetsOfEightTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SetsOfEightTest - 2019.03.01 at 10h 51m 52s.xml">
-      <configuration name="SetsOfEightTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5060000" />
+    <option name="totallyTimeSpent" value="641000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21052632" />
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Build" weight="0.13796575" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Messages" weight="0.32930514" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27529022" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.13796575" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.049751244" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21052632" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3283582" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27529022" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.13796575" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.049751244" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="right" id="Maven" order="0" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="right" id="Gradle" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/Producer.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/Multiplier.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/ListToStream.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c07/BadP.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/GenerateSetsOfThree.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/SetsOfEightTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c07/RunBadPC.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c07/RunDeadlockedCrossedClients.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c07/RunWorkingCrossedClients.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c07/Server.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/Consumer.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/CreateSetsOfEight.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/RunThreeToEight.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/exercises/c2/RunMultiplier.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c07/Client.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/classes/examples/c25/ControllerManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4403">
-          <folding>
-            <element signature="e#0#41418#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/GetGameDetails.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/GameDetails.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/SquareCoords.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="207" column="80" selection-start-line="207" selection-start-column="72" selection-end-line="207" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/turnOver.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="206" column="49" selection-start-line="206" selection-start-column="49" selection-end-line="206" selection-end-column="49" />
+        <state relative-caret-position="741">
+          <caret line="208" column="47" lean-forward="true" selection-start-line="208" selection-start-column="47" selection-end-line="208" selection-end-column="47" />
         </state>
       </provider>
     </entry>

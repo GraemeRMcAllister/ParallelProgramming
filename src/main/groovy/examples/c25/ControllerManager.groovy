@@ -204,7 +204,7 @@ class ControllerManager implements CSProcess{
 					def playerID = (turnOver)o
 					def ggd = (GameDetails)o
 					def id = ggd.id
-					if (ggd.playerDetails[playerID+1:]==null){
+					if (ggd.playerDetails[playerID + 1] == null){
 					toPlayers[id].write(new GameDetails( playerDetails: playerMap,
 							pairsSpecification: pairsMap,
 							turn: 0,
