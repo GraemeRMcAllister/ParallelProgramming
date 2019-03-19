@@ -181,7 +181,7 @@ class ControllerManager implements CSProcess{
 			def running = (pairsUnclaimed != 0)
 			while (running){
 				def o = fromPlayers.read()
-                println(o)
+                println(o.toString())
 				if ( o instanceof EnrolPlayer) {
 					def playerDetails = (EnrolPlayer)o
 					def playerName = playerDetails.name
@@ -205,25 +205,15 @@ class ControllerManager implements CSProcess{
 
                     def playerID = o.playerID
                     def id = o.gameID
-					println(playerID)
+					println("PlayerID: $playerID + PlayerMap Size:")
+                    println(playerMap.size())
 
                     println(id)
 
-                    println(playerMap.get(playerID))
 
 
-                    def players = playerMap.keySet()
-                    println(players)
-                    for( p in players)
-                    {
-                        println(p)
-                    }
-
-
-
-
-
-					if (playerMap.size() > playerID+1){
+                    println()
+					if (playerMap.size() >= playerID+1){
                         println("equals equals null - turn continues, no other player")
 					toPlayers[id].write(new GameDetails( playerDetails: playerMap,
 							pairsSpecification: pairsMap,

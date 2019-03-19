@@ -151,11 +151,11 @@ class PlayerManager implements CSProcess {
 			IPconfig.write(" ")	
 			
 			// main loop
+            toController.write(new GetGameDetails(id: myPlayerId))
 			while (enroled) {
 				def chosenPairs = [null, null]
 				createBoard()
 				dList.change (display, 0)
-				toController.write(new GetGameDetails(id: myPlayerId))
 				def gameDetails = (GameDetails)fromController.read()
 				println("consumed new game")
 				def gameId = gameDetails.gameId
@@ -189,6 +189,7 @@ class PlayerManager implements CSProcess {
 							enroled = false
 							break						
 						case VALIDPOINT:
+                            println("valid point")
 							def vPoint = ((SquareCoords)validPoint.read()).location
 							chosenPairs[currentPair] = vPoint
 							currentPair = currentPair + 1
@@ -199,6 +200,7 @@ class PlayerManager implements CSProcess {
 								nextPairConfig.write("SELECT NEXT PAIR")
 								switch (innerAlt.select()){
 									case NEXT:
+                                        println("next")
 										nextButton.read()
 										nextPairConfig.write(" ")
 										def p1 = chosenPairs[0]
@@ -208,6 +210,8 @@ class PlayerManager implements CSProcess {
 										chosenPairs = [null, null]
 										currentPair = 0
 										println("playerID:$myPlayerId my turn is over GameID:$gameId")
+                                        turnID = -1
+                                        println(turnID)
 										toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
 										break
 									case WITHDRAW:

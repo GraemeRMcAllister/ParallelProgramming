@@ -29,7 +29,7 @@ class Matcher implements CSProcess {
 				getPoint.write(0)
 				def point = ((MousePoint)receivePoint.read()).point
 				pointXY = getXY(point, side, gap)
-				//println  "point = $point; pointXY = $pointXY"
+				println  "point = $point; pointXY = $pointXY"
 				if ( pairsMap.containsKey(pointXY)) gotValidPoint = true
 			}
 			//println  "Matcher: pointXY = $pointXY"
