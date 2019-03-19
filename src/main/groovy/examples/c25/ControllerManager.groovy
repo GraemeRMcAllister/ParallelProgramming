@@ -199,11 +199,31 @@ class ControllerManager implements CSProcess{
 						// no new players can join the game
 						playerToChan.write(new EnrolDetails(id: -1))
 					}
-				} else if ( o instanceof GetGameDetails) {
+				}
+				else if (o instanceof turnOver){
+					def playerID = (turnOver)o
+					def ggd = (GameDetails)o
+					def id = ggd.id
+					if (ggd.playerDetails[playerID+1:]==null){
+					toPlayers[id].write(new GameDetails( playerDetails: playerMap,
+							pairsSpecification: pairsMap,
+							turn: 0,
+							gameId: gameId))
+					}
+					else {
+						toPlayers[id].write(new GameDetails( playerDetails: playerMap,
+								pairsSpecification: pairsMap,
+								turn: playerID+1,
+								gameId: gameId))
+					}
+
+				}
+				else if ( o instanceof GetGameDetails) {
 					def ggd = (GetGameDetails)o
 					def id = ggd.id
 					toPlayers[id].write(new GameDetails( playerDetails: playerMap,
 													 	 pairsSpecification: pairsMap,
+													     turn: 0,
 														 gameId: gameId))
 				} else if ( o instanceof ClaimPair) {
 					def claimPair = (ClaimPair)o

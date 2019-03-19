@@ -161,6 +161,7 @@ class PlayerManager implements CSProcess {
 				IPconfig.write("Playing Game Number - " + gameId)	
 				def playerMap = gameDetails.playerDetails
 				def pairsMap = gameDetails.pairsSpecification
+				def turn = gameDetails.turn
 				def playerIds = playerMap.keySet()
 				playerIds.each { p ->
 					def pData = playerMap.get(p)
@@ -175,7 +176,7 @@ class PlayerManager implements CSProcess {
 				}
 				def currentPair = 0
 				def notMatched = true
-				while ((chosenPairs[1] == null) && (enroled) && (notMatched)) {
+				while ((chosenPairs[1] == null) && (enroled) && (notMatched) && (turn = myPlayerId)) {
 					getValidPoint.write (new GetValidPoint( side: side,
 															gap: gap,
 															pairsMap: pairsMap))					
@@ -204,6 +205,7 @@ class PlayerManager implements CSProcess {
 										changePairs(p2[0], p2[1], Color.LIGHT_GRAY, -1)
 										chosenPairs = [null, null]
 										currentPair = 0
+										toController.write(new turnOver(playerID: myPlayerid))
 										break
 									case WITHDRAW:
 										withdrawButton.read()
