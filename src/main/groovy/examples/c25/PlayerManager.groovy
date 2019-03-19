@@ -157,11 +157,12 @@ class PlayerManager implements CSProcess {
 				dList.change (display, 0)
 				toController.write(new GetGameDetails(id: myPlayerId))
 				def gameDetails = (GameDetails)fromController.read()
+				println("consumed new game")
 				def gameId = gameDetails.gameId
-				IPconfig.write("Playing Game Number - " + gameId)	
+				IPconfig.write("Playing Game Number - " + gameId+1)
 				def playerMap = gameDetails.playerDetails
 				def pairsMap = gameDetails.pairsSpecification
-				def turn = gameDetails.turn
+				def turnID = gameDetails.turn
 				def playerIds = playerMap.keySet()
 				playerIds.each { p ->
 					def pData = playerMap.get(p)
@@ -176,7 +177,8 @@ class PlayerManager implements CSProcess {
 				}
 				def currentPair = 0
 				def notMatched = true
-				while ((chosenPairs[1] == null) && (enroled) && (notMatched) && (turn = myPlayerId)) {
+				println("$turnID + $myPlayerId")
+				while ((chosenPairs[1] == null) && (enroled) && (notMatched) && (turnID == myPlayerId)) {
 					getValidPoint.write (new GetValidPoint( side: side,
 															gap: gap,
 															pairsMap: pairsMap))					
@@ -205,7 +207,8 @@ class PlayerManager implements CSProcess {
 										changePairs(p2[0], p2[1], Color.LIGHT_GRAY, -1)
 										chosenPairs = [null, null]
 										currentPair = 0
-										toController.write(new turnOver(playerID: myPlayerid))
+										println("playerID:$myPlayerId my turn is over GameID:$gameId")
+										toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
 										break
 									case WITHDRAW:
 										withdrawButton.read()
@@ -221,7 +224,7 @@ class PlayerManager implements CSProcess {
 																   p2: chosenPairs[1]))
 							}
 							break
-					}// end of outer switch	
+					}// end of outer switch
 				} // end of while getting two pairs
 			} // end of while enrolled loop
 			IPlabel.write("Goodbye " + playerName + ", please close game window")

@@ -41,9 +41,9 @@ class ControllerManager implements CSProcess{
 		def rectSize = ((side+gap) *boardSize) + gap
 		int pairsRange = maxPairs - minPairs
 		
-		def availablePlayerIds = ((maxPlayers-1) .. 0).collect{it}
+		def availablePlayerIds = (0 .. (maxPlayers-1)).collect{it}
 		
-		//println "$availablePlayerIds"
+		println "$availablePlayerIds"
 		def generatePairsNumber = { min, range ->
 			def rng = new Random()
 			def randomAmount = rng.nextInt(range)
@@ -168,7 +168,7 @@ class ControllerManager implements CSProcess{
 		dList.set(display)
 		def nPairs = 0
 		def pairsUnclaimed = 0
-		def gameId = 0
+		def gameId = -1
 		while (true) {
 			statusConfig.write("Creating")
 //			nPairs = generatePairsNumber(minPairs, pairsRange)
@@ -181,6 +181,7 @@ class ControllerManager implements CSProcess{
 			def running = (pairsUnclaimed != 0)
 			while (running){
 				def o = fromPlayers.read()
+                println(o)
 				if ( o instanceof EnrolPlayer) {
 					def playerDetails = (EnrolPlayer)o
 					def playerName = playerDetails.name
@@ -201,19 +202,41 @@ class ControllerManager implements CSProcess{
 					}
 				}
 				else if (o instanceof turnOver){
-					def playerID = (turnOver)o
-					def ggd = (GameDetails)o
-					def id = ggd.id
-					if (ggd.playerDetails[playerID + 1] == null){
+
+                    def playerID = o.playerID
+                    def id = o.gameID
+					println(playerID)
+
+                    println(id)
+
+                    println(playerMap.get(playerID))
+
+
+                    def players = playerMap.keySet()
+                    println(players)
+                    for( p in players)
+                    {
+                        println(p)
+                    }
+
+
+
+
+
+					if (playerMap.size() > playerID+1){
+                        println("equals equals null - turn continues, no other player")
 					toPlayers[id].write(new GameDetails( playerDetails: playerMap,
 							pairsSpecification: pairsMap,
-							turn: 0,
+							turn: playerID,
 							gameId: gameId))
+                        println("sent new game")
 					}
 					else {
+                        println("else")
+                        def newTurn = playerID+1
 						toPlayers[id].write(new GameDetails( playerDetails: playerMap,
 								pairsSpecification: pairsMap,
-								turn: playerID+1,
+								turn: newTurn,
 								gameId: gameId))
 					}
 

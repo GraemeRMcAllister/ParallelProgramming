@@ -1,6 +1,6 @@
 package examples.c25
 
 class turnOver implements Serializable{
-    def turn
-
+    def playerID
+    def gameID
 }
