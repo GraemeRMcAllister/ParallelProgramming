@@ -153,11 +153,11 @@ class ControllerManager implements CSProcess{
 		def nodeAddr = new TCPIPNodeAddress (3000)
 		Node.getInstance().init (nodeAddr)
 		IPlabelConfig.write(nodeAddr.getIpAddress())
-		//println "Controller IP address = ${nodeAddr.getIpAddress()}"
+		println "Controller IP address = ${nodeAddr.getIpAddress()}"
 		
 		def fromPlayers = NetChannel.net2one()
 		def fromPlayersLoc = fromPlayers.getLocation()
-		//println "Controller: fromPlayer channel location - ${fromPlayersLoc.toString()}"
+		println "Controller: fromPlayer channel location - ${fromPlayersLoc.toString()}"
 
 		def toPlayers = new ChannelOutputList()
 		for ( p in 0..<maxPlayers) toPlayers.append(null)
@@ -210,24 +210,16 @@ class ControllerManager implements CSProcess{
 
                     println(id)
 
-
-
                     println()
 					if (playerMap.size() >= playerID+1){
-                        println("equals equals null - turn continues, no other player")
-					toPlayers[id].write(new GameDetails( playerDetails: playerMap,
-							pairsSpecification: pairsMap,
-							turn: playerID,
-							gameId: gameId))
+                        println("turn continues, no other player")
+						toPlayers[id].write(new turnOver( gameID: id, playerID: playerID))
                         println("sent new game")
 					}
 					else {
-                        println("else")
+                        println("next players turn")
                         def newTurn = playerID+1
-						toPlayers[id].write(new GameDetails( playerDetails: playerMap,
-								pairsSpecification: pairsMap,
-								turn: newTurn,
-								gameId: gameId))
+						toPlayers[id].write(new turnOver( gameID: id, playerID: newTurn))
 					}
 
 				}

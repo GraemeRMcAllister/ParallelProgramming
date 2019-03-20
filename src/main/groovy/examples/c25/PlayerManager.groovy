@@ -151,12 +151,13 @@ class PlayerManager implements CSProcess {
 			IPconfig.write(" ")	
 			
 			// main loop
-            toController.write(new GetGameDetails(id: myPlayerId))
+
 			while (enroled) {
 				def chosenPairs = [null, null]
 				createBoard()
 				dList.change (display, 0)
-				def gameDetails = (GameDetails)fromController.read()
+				toController.write(new GetGameDetails(id: myPlayerId))
+                def gameDetails = (GameDetails)fromController.read()
 				println("consumed new game")
 				def gameId = gameDetails.gameId
 				IPconfig.write("Playing Game Number - " + gameId+1)
@@ -213,6 +214,8 @@ class PlayerManager implements CSProcess {
                                         turnID = -1
                                         println(turnID)
 										toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
+										def whosturn = (turnOver)fromController.read()
+                                        turnID = whosturn.playerID
 										break
 									case WITHDRAW:
 										withdrawButton.read()
