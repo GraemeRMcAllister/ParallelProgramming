@@ -178,7 +178,9 @@ class ControllerManager implements CSProcess{
 			gameId = gameId + 1
 			createPairs (nPairs)
 			statusConfig.write("Running")
+			def turnID = 0
 			def running = (pairsUnclaimed != 0)
+
 			while (running){
 				def o = fromPlayers.read()
                 println(o.toString())
@@ -203,23 +205,22 @@ class ControllerManager implements CSProcess{
 				}
 				else if (o instanceof turnOver){
 
-                    def playerID = o.playerID
+                    turnID = o.playerID
                     def id = o.gameID
-					println("PlayerID: $playerID + PlayerMap Size:")
+					println("PlayerID: $turnID + PlayerMap Size:")
                     println(playerMap.size())
 
                     println(id)
 
-                    println()
-					if (playerMap.size() >= playerID+1){
-                        println("turn continues, no other player")
-						toPlayers[id].write(new turnOver( gameID: id, playerID: playerID))
+					if (playerMap.size() >= turnID+1){
+                        println("Back to player 0")
+						toPlayers[id].write(new turnOver( gameID: id, playerID: 0))
                         println("sent new game")
 					}
 					else {
                         println("next players turn")
-                        def newTurn = playerID+1
-						toPlayers[id].write(new turnOver( gameID: id, playerID: newTurn))
+                        turnID = turnID+1
+						toPlayers[id].write(new turnOver( gameID: id, playerID: turnID))
 					}
 
 				}
@@ -228,7 +229,7 @@ class ControllerManager implements CSProcess{
 					def id = ggd.id
 					toPlayers[id].write(new GameDetails( playerDetails: playerMap,
 													 	 pairsSpecification: pairsMap,
-													     turn: 0,
+													     turn: turnID,
 														 gameId: gameId))
 				} else if ( o instanceof ClaimPair) {
 					def claimPair = (ClaimPair)o
