@@ -212,15 +212,19 @@ class ControllerManager implements CSProcess{
 
                     println(id)
 
-					if (playerMap.size() >= turnID+1){
+					if (turnID+1 >= playerMap.size()){
                         println("Back to player 0")
+						fromPlayers.read()
 						toPlayers[id].write(new turnOver( gameID: id, playerID: 0))
                         println("sent new game")
 					}
 					else {
                         println("next players turn")
                         turnID = turnID+1
+
+						fromPlayers.read()
 						toPlayers[id].write(new turnOver( gameID: id, playerID: turnID))
+
 					}
 
 				}
@@ -267,7 +271,7 @@ class ControllerManager implements CSProcess{
 					pairsWon[id].write("   ")
 					toPlayers[id] = null
 					availablePlayerIds << id
-					availablePlayerIds =  availablePlayerIds.sort().reverse()
+					availablePlayerIds =  availablePlayerIds.sort()
 				} // end else if chain
 			} // while running
 			createBoard()

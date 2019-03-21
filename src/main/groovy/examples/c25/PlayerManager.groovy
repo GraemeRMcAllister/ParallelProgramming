@@ -125,8 +125,21 @@ class PlayerManager implements CSProcess {
 		IPlabel.write("Connecting to the GameController")
 		
 		// create Node and Net Channel Addresses
-		def nodeAddr = new TCPIPNodeAddress (4000)
-		Node.getInstance().init (nodeAddr)
+
+			def nodeAddr = new TCPIPNodeAddress(4000)
+
+		println(nodeAddr)
+		try {
+			println("trying")
+			Node.getInstance().init(nodeAddr)
+		}
+		catch(JCSPNetworkException e){
+			println("caught")
+			nodeAddr = new TCPIPNodeAddress(2000)
+			def Node2 = new Node()
+			println(nodeAddr)
+			Node2.getInstance().init(nodeAddr)
+		}
 		def toControllerAddr = new TCPIPNodeAddress ( controllerIP, 3000)
 		def toController = NetChannel.any2net(toControllerAddr, 50 )
 		def fromController = NetChannel.net2one()
@@ -152,19 +165,44 @@ class PlayerManager implements CSProcess {
 			
 			// main loop
 
+			toController.write(new GetGameDetails(id: myPlayerId))
+			println("requested game updated")
+			def gameDetails = (GameDetails) fromController.read()
+			def gameId = gameDetails.gameId
+			def playerMap = gameDetails.playerDetails
+			def pairsMap = gameDetails.pairsSpecification
+			def turnID = gameDetails.turn
+
 			while (enroled) {
+				def timer= new CSTimer()
+				timer.sleep (1000)
+				println("timer triggered")
 				def chosenPairs = [null, null]
 				createBoard()
 				dList.change (display, 0)
 				toController.write(new GetGameDetails(id: myPlayerId))
-                def gameDetails = (GameDetails)fromController.read()
-				println("consumed new game")
-				def gameId = gameDetails.gameId
-				IPconfig.write("Playing Game Number - " + gameId+1)
-				def playerMap = gameDetails.playerDetails
-				def pairsMap = gameDetails.pairsSpecification
-				def turnID = gameDetails.turn
+				println("requested game updated")
+				def fc = fromController.read()
+				if (fc instanceof turnOver)
+				{
+					//turnOver = (turnOver)fc
+					turnID = fc.playerID
+					gameId = fc.gameID
+				}
+				else if (fc instanceof GameDetails)
+				{
+					//GameDetails = (GameDetails)fc
+					gameId = fc.gameId
+					playerMap = fc.playerDetails
+					pairsMap = fc.pairsSpecification
+					turnID = fc.turn
+				}
+
+				println("updated game")
+				int gameIdDisplay = gameId + 1
+				IPconfig.write("Playing Game Number - $gameIdDisplay")
 				def playerIds = playerMap.keySet()
+
 				playerIds.each { p ->
 					def pData = playerMap.get(p)
 					playerNames[p].write(pData[0])
@@ -211,8 +249,6 @@ class PlayerManager implements CSProcess {
 										chosenPairs = [null, null]
 										currentPair = 0
 										println("playerID:$myPlayerId my turn is over GameID:$gameId")
-                                        turnID = -1
-                                        println(turnID)
 										toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
 										def whosturn = (turnOver)fromController.read()
                                         turnID = whosturn.playerID
