@@ -191,11 +191,13 @@ class PlayerManager implements CSProcess {
 				}
 				else if (fc instanceof GameDetails)
 				{
+					toController.write(new GetGameDetails(id: myPlayerId))
+					GameDetails = fromController.read()
 					//GameDetails = (GameDetails)fc
-					gameId = fc.gameId
-					playerMap = fc.playerDetails
-					pairsMap = fc.pairsSpecification
-					turnID = fc.turn
+					gameId = GameDetails.gameId
+					playerMap = GameDetails.playerDetails
+					pairsMap = GameDetails.pairsSpecification
+					turnID = GameDetails.turn
 				}
 
 				println("updated game")

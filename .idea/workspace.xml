@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6023e3cc-aac7-4cc0-8f64-42a5f11fee30" name="Default Changelist" comment="New one">
+    <list default="true" id="6023e3cc-aac7-4cc0-8f64-42a5f11fee30" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/ControllerManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/examples/c25/ControllerManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy" afterDir="false" />
     </list>
@@ -72,14 +68,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="groovy" value="719" />
-          <entry key="txt" value="7" />
+          <entry key="groovy" value="736" />
+          <entry key="txt" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="719" />
-          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="Groovy" value="736" />
+          <entry key="PLAIN_TEXT" value="31" />
         </counts>
       </usages-collector>
     </session>
@@ -95,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="747">
-              <caret line="217" column="36" selection-start-line="217" selection-start-column="34" selection-end-line="217" selection-end-column="36" />
+            <state relative-caret-position="679">
+              <caret line="228" column="21" lean-forward="true" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -113,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="182" column="68" selection-start-line="182" selection-start-column="58" selection-end-line="182" selection-end-column="68" />
+            <state relative-caret-position="527">
+              <caret line="192" column="17" lean-forward="true" selection-start-line="192" selection-start-column="17" selection-end-line="192" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -186,8 +182,8 @@
       <find>turnOver</find>
       <find>node</find>
       <find>new</find>
-      <find>toPlayers</find>
       <find>getin</find>
+      <find>toPlayers</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -647,7 +643,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553172752937" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553173307639" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
@@ -669,7 +665,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Groovy.RunPlayer2">
+  <component name="RunManager" selected="Groovy.RunController">
     <configuration name="RunController" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="UCaPE_main" />
       <setting name="path" value="file://$PROJECT_DIR$/src/main/groovy/examples/c25/RunController.groovy" />
@@ -710,9 +706,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Groovy.RunPlayer2" />
-        <item itemvalue="Groovy.RunPlayer" />
         <item itemvalue="Groovy.RunController" />
+        <item itemvalue="Groovy.RunPlayer" />
+        <item itemvalue="Groovy.RunPlayer2" />
       </list>
     </recent_temporary>
   </component>
@@ -729,10 +725,18 @@
       <workItem from="1553091109611" duration="677000" />
       <workItem from="1553091808813" duration="1522000" />
     </task>
+    <task id="LOCAL-00001" summary="attempt before refresh">
+      <created>1553173132223</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553173132223</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11103000" />
+    <option name="totallyTimeSpent" value="11524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
@@ -810,7 +814,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Got it working for single player, players sends turnOver to controller&#10;&#10;controller sends turnOver straight back(adheres to rules) with new turnID. need second user to try" />
     <MESSAGE value="New one" />
-    <option name="LAST_COMMIT_MESSAGE" value="New one" />
+    <MESSAGE value="attempt before refresh" />
+    <option name="LAST_COMMIT_MESSAGE" value="attempt before refresh" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/RunController.groovy">
@@ -886,17 +891,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="182" column="68" selection-start-line="182" selection-start-column="58" selection-end-line="182" selection-end-column="68" />
+        <state relative-caret-position="679">
+          <caret line="228" column="21" lean-forward="true" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="217" column="36" selection-start-line="217" selection-start-column="34" selection-end-line="217" selection-end-column="36" />
+        <state relative-caret-position="527">
+          <caret line="192" column="17" lean-forward="true" selection-start-line="192" selection-start-column="17" selection-end-line="192" selection-end-column="17" />
         </state>
       </provider>
     </entry>
