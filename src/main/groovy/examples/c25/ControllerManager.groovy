@@ -215,16 +215,13 @@ class ControllerManager implements CSProcess{
 					if (turnID+1 >= playerMap.size()){
                         println("Back to player 0")
 						turnID = 0
-						fromPlayers.read()
-						toPlayers[id].write(new turnOver( gameID: id, playerID: turnID))
+
                         println("sent new game")
 					}
 					else {
                         println("next players turn")
                         turnID = turnID+1
 
-						fromPlayers.read()
-						toPlayers[id].write(new turnOver( gameID: id, playerID: turnID))
 
 					}
 

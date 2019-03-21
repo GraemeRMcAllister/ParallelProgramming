@@ -182,23 +182,13 @@ class PlayerManager implements CSProcess {
 				dList.change (display, 0)
 				toController.write(new GetGameDetails(id: myPlayerId))
 				println("requested game updated")
-				def fc = fromController.read()
-				if (fc instanceof turnOver)
-				{
-					//turnOver = (turnOver)fc
-					turnID = fc.playerID
-					gameId = fc.gameID
-				}
-				else if (fc instanceof GameDetails)
-				{
-					toController.write(new GetGameDetails(id: myPlayerId))
-					GameDetails = fromController.read()
+				gameDetails = (GameDetails)fromController.read()
 					//GameDetails = (GameDetails)fc
-					gameId = GameDetails.gameId
-					playerMap = GameDetails.playerDetails
-					pairsMap = GameDetails.pairsSpecification
-					turnID = GameDetails.turn
-				}
+					gameId = gameDetails.gameId
+					playerMap = gameDetails.playerDetails
+					pairsMap = gameDetails.pairsSpecification
+					turnID = gameDetails.turn
+
 
 				println("updated game")
 				int gameIdDisplay = gameId + 1
@@ -219,7 +209,15 @@ class PlayerManager implements CSProcess {
 				def currentPair = 0
 				def notMatched = true
 				println("$turnID + $myPlayerId")
-				while ((chosenPairs[1] == null) && (enroled) && (notMatched) && (turnID == myPlayerId)) {
+				while ((chosenPairs[1] == null) && (enroled) && (notMatched)) {
+					while((turnID != myPlayerId))
+					{
+						gameDetails = (GameDetails) fromController.read()
+						gameId = gameDetails.gameId
+						playerMap = gameDetails.playerDetails
+						pairsMap = gameDetails.pairsSpecification
+						turnID = gameDetails.turn
+					}
 					getValidPoint.write (new GetValidPoint( side: side,
 															gap: gap,
 															pairsMap: pairsMap))					
@@ -250,10 +248,9 @@ class PlayerManager implements CSProcess {
 										changePairs(p2[0], p2[1], Color.LIGHT_GRAY, -1)
 										chosenPairs = [null, null]
 										currentPair = 0
+										turnID = -1
 										println("playerID:$myPlayerId my turn is over GameID:$gameId")
 										toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
-										def whosturn = (turnOver)fromController.read()
-                                        turnID = whosturn.playerID
 										break
 									case WITHDRAW:
 										withdrawButton.read()
