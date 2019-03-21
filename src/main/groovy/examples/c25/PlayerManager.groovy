@@ -209,15 +209,14 @@ class PlayerManager implements CSProcess {
 				def currentPair = 0
 				def notMatched = true
 				println("$turnID + $myPlayerId")
+				while((turnID != myPlayerId))
+				{
+					println "Looping"
+					turnID = fromController.read()
+					notMatched = false
+				}
 				while ((chosenPairs[1] == null) && (enroled) && (notMatched)) {
-					while((turnID != myPlayerId))
-					{
-						gameDetails = (GameDetails) fromController.read()
-						gameId = gameDetails.gameId
-						playerMap = gameDetails.playerDetails
-						pairsMap = gameDetails.pairsSpecification
-						turnID = gameDetails.turn
-					}
+					println "Looping top loop"
 					getValidPoint.write (new GetValidPoint( side: side,
 															gap: gap,
 															pairsMap: pairsMap))					
@@ -249,6 +248,7 @@ class PlayerManager implements CSProcess {
 										chosenPairs = [null, null]
 										currentPair = 0
 										turnID = -1
+										notMatched = false
 										println("playerID:$myPlayerId my turn is over GameID:$gameId")
 										toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
 										break
