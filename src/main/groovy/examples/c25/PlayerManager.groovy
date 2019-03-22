@@ -214,9 +214,14 @@ class PlayerManager implements CSProcess {
 					println "Looping"
 					gameDetails = (GameDetails)fromController.read()
 					turnID = gameDetails.turn
+					pairsMap = gameDetails.pairsSpecification
 				}
 				while ((chosenPairs[1] == null) && (enroled) && (notMatched)) {
 					println "Looping top loop"
+					gameDetails = (GameDetails)fromController.read()
+					pairsMap = gameDetails.pairsSpecification
+					createBoard()
+					dList.change (display, 0)
 					getValidPoint.write (new GetValidPoint( side: side,
 															gap: gap,
 															pairsMap: pairsMap))					
