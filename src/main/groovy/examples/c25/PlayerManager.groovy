@@ -178,6 +178,7 @@ class PlayerManager implements CSProcess {
 			def turnID = gameDetails.turn
 
 			while (enroled) {
+				println "BACK TO TOP"
 				def timer= new CSTimer()
 				timer.sleep (1000)
 				println("timer triggered")
@@ -203,51 +204,40 @@ class PlayerManager implements CSProcess {
 					playerNames[p].write(pData[0])
 					pairsWon[p].write(" " + pData[1])
 				}
-				
+
 				// now use pairsMap to create the board
 				//GameUpdate(gameDetails, changePairs)
 				def pairLocs = pairsMap.keySet()
 				pairLocs.each {loc ->
 					changePairs(loc[0], loc[1], Color.LIGHT_GRAY, -1)
 				}
-
 				def currentPair = 0
 				def notMatched = true
 				println("$turnID + $myPlayerId")
-
-
-
-
-
+				while(turnID != myPlayerId)
+				{
+					println ("current turnID $turnID")
+					println "Waiting for other player"
+					def fromC = fromController.read()
+					if(fromC instanceof GameDetails) {
+						gameDetails = (GameDetails)fromC
+						turnID = gameDetails.turn
+						println("$turnID and $myPlayerId")
+						pairsMap = gameDetails.pairsSpecification
+						notMatched = false
+					}
+					else if (fromC instanceof selectedTile){
+						changePairs(fromC.vpoint[0], fromC.vpoint[1], fromC.pairdata[1], fromC.pairdata[0])
+						pairsMap = gameDetails.pairsSpecification
+						notMatched = false
+					}
+				}
 				while ((chosenPairs[1] == null) && (enroled) && (notMatched)) {
 					println "My Turn"
-					//gameDetails = (GameDetails)fromController.read()
 					pairsMap = gameDetails.pairsSpecification
 					getValidPoint.write (new GetValidPoint( side: side,
 															gap: gap,
 															pairsMap: pairsMap))
-					while(turnID != myPlayerId)
-					{
-						println ("current turnID $turnID")
-						println "Waiting for other player"
-						def fromC = fromController.read()
-						if(fromC instanceof GameDetails) {
-							gameDetails = (GameDetails)fromC
-							turnID = gameDetails.turn
-							println("$turnID and $myPlayerId")
-							def p1 = chosenPairs[0]
-							def p2 = chosenPairs[1]
-							changePairs(p1[0], p1[1], Color.LIGHT_GRAY, -1)
-							changePairs(p2[0], p2[1], Color.LIGHT_GRAY, -1)
-							chosenPairs = [null, null]
-						}
-						else if (fromC instanceof selectedTile){
-
-							changePairs(fromC.vpoint[0], fromC.vpoint[1], fromC.pairdata[1], fromC.pairdata[0])
-						}
-
-					}
-
 					switch ( outerAlt.select() ) {
 						case WITHDRAW:	
 							withdrawButton.read()
@@ -285,7 +275,6 @@ class PlayerManager implements CSProcess {
 										gameDetails = (GameDetails)fromController.read()
 										turnID = gameDetails.turn
 										break
-
 									case WITHDRAW:
 										withdrawButton.read()
 										toController.write(new WithdrawFromGame(id: myPlayerId))
