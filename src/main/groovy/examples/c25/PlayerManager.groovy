@@ -215,10 +215,11 @@ class PlayerManager implements CSProcess {
 					gameDetails = (GameDetails)fromController.read()
 					turnID = gameDetails.turn
 					pairsMap = gameDetails.pairsSpecification
+					createBoard()
 				}
 				while ((chosenPairs[1] == null) && (enroled) && (notMatched)) {
 					println "Looping top loop"
-					gameDetails = (GameDetails)fromController.read()
+					//gameDetails = (GameDetails)fromController.read()
 					pairsMap = gameDetails.pairsSpecification
 					createBoard()
 					dList.change (display, 0)
@@ -257,6 +258,8 @@ class PlayerManager implements CSProcess {
 										println("playerID:$myPlayerId my turn is over GameID:$gameId")
 										toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
 										gameDetails = (GameDetails)fromController.read()
+										pairsMap = gameDetails.pairsSpecification
+										createBoard()
 										break
 									case WITHDRAW:
 										withdrawButton.read()
@@ -271,6 +274,8 @@ class PlayerManager implements CSProcess {
 																   p1: chosenPairs[0],
 																   p2: chosenPairs[1]))
 								gameDetails = (GameDetails)fromController.read()
+								pairsMap = gameDetails.pairsSpecification
+								createBoard()
 							}
 							break
 					}// end of outer switch
