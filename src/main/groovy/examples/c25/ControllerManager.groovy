@@ -216,13 +216,17 @@ class ControllerManager implements CSProcess{
                         println("Back to player 0")
 						turnID = 0
                         println("sent new game")
-						toPlayers[turnID].write(turnID)
-
+						for (x in 0 ..< playerMap.size()) {
+							toPlayers[x].write(new GameDetails(playerDetails: playerMap,
+									pairsSpecification: pairsMap,
+									turn: turnID,
+									gameId: gameId))
+						}
 					}
 					else {
                         println("next players turn")
                         turnID = turnID+1
-						for (x in 0 ..< playerMap) {
+						for (x in 0 ..< playerMap.size()) {
 							toPlayers[x].write(new GameDetails(playerDetails: playerMap,
 									pairsSpecification: pairsMap,
 									turn: turnID,
@@ -261,6 +265,12 @@ class ControllerManager implements CSProcess{
 							pairsUnclaimed = pairsUnclaimed - 1
 							pairsConfig.write(" "+ pairsUnclaimed)
 							running = (pairsUnclaimed != 0)
+							for (x in 0 ..< playerMap.size()) {
+								toPlayers[x].write(new GameDetails(playerDetails: playerMap,
+										pairsSpecification: pairsMap,
+										turn: turnID,
+										gameId: gameId))
+							}
 						} 
 						else {
 							//println "cannot claim pair: $p1, $p2"

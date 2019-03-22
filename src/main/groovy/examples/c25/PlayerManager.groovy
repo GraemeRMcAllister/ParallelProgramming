@@ -251,7 +251,7 @@ class PlayerManager implements CSProcess {
 										notMatched = false
 										println("playerID:$myPlayerId my turn is over GameID:$gameId")
 										toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
-										gameDetails = fromController.read(GameDetails)
+										gameDetails = (GameDetails)fromController.read()
 										break
 									case WITHDRAW:
 										withdrawButton.read()
@@ -265,6 +265,7 @@ class PlayerManager implements CSProcess {
 												   	   			   gameId: gameId,
 																   p1: chosenPairs[0],
 																   p2: chosenPairs[1]))
+								gameDetails = (GameDetails)fromController.read()
 							}
 							break
 					}// end of outer switch
