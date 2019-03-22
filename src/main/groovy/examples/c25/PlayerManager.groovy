@@ -28,8 +28,12 @@ class PlayerManager implements CSProcess {
 	int minPairs = 3
 	int maxPairs = 6
 	int boardSize = 6
+
+
 	
 	void run(){
+
+
 		
 		int gap = 5
 		def offset = [gap, gap]
@@ -75,7 +79,7 @@ class PlayerManager implements CSProcess {
 		
 		def pairLocations = []
 		def colours = [Color.MAGENTA, Color.CYAN, Color.YELLOW, Color.PINK]
-		
+
 		def changePairs = {x, y, colour, p ->
 			def int xPos = offset[0]+(gap*x)+ (side*x)
 			def int yPos = offset[1]+(gap*y)+ (side*y)
@@ -181,7 +185,6 @@ class PlayerManager implements CSProcess {
 				createBoard()
 				dList.change (display, 0)
 				toController.write(new GetGameDetails(id: myPlayerId))
-				println("requested game updated")
 				gameDetails = (GameDetails)fromController.read()
 					//GameDetails = (GameDetails)fc
 					gameId = gameDetails.gameId
@@ -202,27 +205,22 @@ class PlayerManager implements CSProcess {
 				}
 				
 				// now use pairsMap to create the board
+				//GameUpdate(gameDetails, changePairs)
 				def pairLocs = pairsMap.keySet()
 				pairLocs.each {loc ->
 					changePairs(loc[0], loc[1], Color.LIGHT_GRAY, -1)
 				}
+
 				def currentPair = 0
 				def notMatched = true
 				println("$turnID + $myPlayerId")
-				while((turnID != myPlayerId))
-				{
-					println "Looping"
-					gameDetails = (GameDetails)fromController.read()
-					turnID = gameDetails.turn
-					pairsMap = gameDetails.pairsSpecification
-					createBoard()
-				}
-				while ((chosenPairs[1] == null) && (enroled) && (notMatched)) {
-					println "Looping top loop"
+
+
+
+				while ((chosenPairs[1] == null) && (enroled) && (notMatched) && (turnID == myPlayerId)) {
+					println "My Turn"
 					//gameDetails = (GameDetails)fromController.read()
 					pairsMap = gameDetails.pairsSpecification
-					createBoard()
-					dList.change (display, 0)
 					getValidPoint.write (new GetValidPoint( side: side,
 															gap: gap,
 															pairsMap: pairsMap))					
@@ -253,13 +251,11 @@ class PlayerManager implements CSProcess {
 										changePairs(p2[0], p2[1], Color.LIGHT_GRAY, -1)
 										chosenPairs = [null, null]
 										currentPair = 0
-										turnID = -1
 										notMatched = false
 										println("playerID:$myPlayerId my turn is over GameID:$gameId")
 										toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
 										gameDetails = (GameDetails)fromController.read()
-										pairsMap = gameDetails.pairsSpecification
-										createBoard()
+										turnID = gameDetails.turn
 										break
 									case WITHDRAW:
 										withdrawButton.read()
@@ -280,14 +276,21 @@ class PlayerManager implements CSProcess {
 							break
 					}// end of outer switch
 				} // end of while getting two pairs
+				if(turnID != myPlayerId)
+				{
+					println ("current turnID $turnID")
+					println "Waiting for other player"
+					while (gameDetails = (GameDetails)fromController.read()){
+						println("looping")
+					}
+					turnID = gameDetails.turn
+					println("$turnID and $myPlayerId")
+				}
 			} // end of while enrolled loop
+
 			IPlabel.write("Goodbye " + playerName + ", please close game window")
 		} //end of enrolling test
 	} // end run
 
 
-	void update(){
-
-
-	}
 }				
