@@ -217,11 +217,18 @@ class ControllerManager implements CSProcess{
 						turnID = 0
                         println("sent new game")
 						toPlayers[turnID].write(turnID)
+
 					}
 					else {
                         println("next players turn")
                         turnID = turnID+1
-						toPlayers[turnID].write(turnID)
+						for (x in 0 ..< playerMap) {
+							toPlayers[x].write(new GameDetails(playerDetails: playerMap,
+									pairsSpecification: pairsMap,
+									turn: turnID,
+									gameId: gameId))
+						}
+
 					}
 
 				}

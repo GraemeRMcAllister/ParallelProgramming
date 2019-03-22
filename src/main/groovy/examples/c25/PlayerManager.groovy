@@ -174,7 +174,7 @@ class PlayerManager implements CSProcess {
 			def turnID = gameDetails.turn
 
 			while (enroled) {
-				def timer= new CSTimer()
+//				def timer= new CSTimer(
 				timer.sleep (1000)
 				println("timer triggered")
 				def chosenPairs = [null, null]
@@ -212,8 +212,8 @@ class PlayerManager implements CSProcess {
 				while((turnID != myPlayerId))
 				{
 					println "Looping"
-					turnID = fromController.read()
-					notMatched = false
+					gameDetails = (GameDetails)fromController.read()
+					turnID = gameDetails.turn
 				}
 				while ((chosenPairs[1] == null) && (enroled) && (notMatched)) {
 					println "Looping top loop"
@@ -251,6 +251,7 @@ class PlayerManager implements CSProcess {
 										notMatched = false
 										println("playerID:$myPlayerId my turn is over GameID:$gameId")
 										toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
+										gameDetails = fromController.read(GameDetails)
 										break
 									case WITHDRAW:
 										withdrawButton.read()
@@ -272,4 +273,10 @@ class PlayerManager implements CSProcess {
 			IPlabel.write("Goodbye " + playerName + ", please close game window")
 		} //end of enrolling test
 	} // end run
+
+
+	void update(){
+
+
+	}
 }				
