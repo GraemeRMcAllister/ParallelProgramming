@@ -236,7 +236,9 @@ class PlayerManager implements CSProcess {
 							chosenPairs[currentPair] = vPoint
 							currentPair = currentPair + 1
 							def pairData = pairsMap.get(vPoint)
-							changePairs(vPoint[0], vPoint[1], pairData[1], pairData[0])
+							toController.write(new selectedTile(vpoint:vPoint, pairdata:pairData))
+							def fromC = (selectedTile)fromController.read()
+							changePairs(fromC.vpoint[0], fromC.vpoint[1], fromC.pairdata[1], fromC.pairdata[0])
 							def matchOutcome = pairsMatch(pairsMap, chosenPairs)
 							if ( matchOutcome == 2)  {
 								nextPairConfig.write("SELECT NEXT PAIR")
@@ -280,11 +282,17 @@ class PlayerManager implements CSProcess {
 				{
 					println ("current turnID $turnID")
 					println "Waiting for other player"
-					while (gameDetails = (GameDetails)fromController.read()){
-						println("looping")
+					def fromC = fromController.read()
+					if(fromC instanceof GameDetails) {
+						gameDetails = (GameDetails)fromC
+						turnID = gameDetails.turn
+						println("$turnID and $myPlayerId")
 					}
-					turnID = gameDetails.turn
-					println("$turnID and $myPlayerId")
+					else if (fromC instanceof selectedTile){
+
+						changePairs(fromC.vpoint[0], fromC.vpoint[1], fromC.pairdata[1], fromC.pairdata[0])
+					}
+
 				}
 			} // end of while enrolled loop
 

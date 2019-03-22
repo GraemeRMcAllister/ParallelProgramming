@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e9f298b-0ba6-4553-974d-4c33506f0326" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager$_run_closure5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/examples/c25/PlayerManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/examples/c25/selectedTile.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,44 +30,65 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="groovy" value="3" />
+          <entry key="groovy" value="5" />
           <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="3" />
+          <entry key="Groovy" value="5" />
           <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="groovy" value="410" />
+          <entry key="groovy" value="709" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="410" />
+          <entry key="Groovy" value="709" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="282" column="27" lean-forward="true" selection-start-line="282" selection-start-column="27" selection-end-line="282" selection-end-column="75" />
+            <state relative-caret-position="237">
+              <caret line="239" column="75" lean-forward="true" selection-start-line="239" selection-start-column="75" selection-end-line="239" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/selectedTile.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/Matcher.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-589">
-              <caret line="158" column="54" lean-forward="true" selection-start-line="158" selection-start-column="54" selection-end-line="158" selection-end-column="54" />
+            <state relative-caret-position="244">
+              <caret line="208" column="20" lean-forward="true" selection-start-line="208" selection-start-column="20" selection-end-line="208" selection-end-column="20" />
+              <folding>
+                <element signature="e#8372#9261#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -400,7 +409,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/groovy/examples/c25/selectedTile.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy" />
       </list>
     </option>
   </component>
@@ -488,7 +499,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553262807711" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553264675559" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="android.dex.compiler" />
@@ -549,12 +560,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553260396376</updated>
-      <workItem from="1553260400196" duration="2395000" />
+      <workItem from="1553260400196" duration="4242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2395000" />
+    <option name="totallyTimeSpent" value="4242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
@@ -565,17 +576,17 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24975026" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24975026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Build" weight="0.32930514" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.5004995" side_tool="true" visible="true" weight="0.32930514" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.4995005" weight="0.32930514" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.500999" side_tool="true" visible="true" weight="0.32930514" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Messages" weight="0.32930514" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4995005" visible="true" weight="0.32930514" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.499001" visible="true" weight="0.32930514" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -620,17 +631,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/Matcher.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-589">
-          <caret line="158" column="54" lean-forward="true" selection-start-line="158" selection-start-column="54" selection-end-line="158" selection-end-column="54" />
+        <state relative-caret-position="68">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/selectedTile.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="282" column="27" lean-forward="true" selection-start-line="282" selection-start-column="27" selection-end-line="282" selection-end-column="75" />
+        <state relative-caret-position="237">
+          <caret line="239" column="75" lean-forward="true" selection-start-line="239" selection-start-column="75" selection-end-line="239" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="208" column="20" lean-forward="true" selection-start-line="208" selection-start-column="20" selection-end-line="208" selection-end-column="20" />
+          <folding>
+            <element signature="e#8372#9261#0" />
+          </folding>
         </state>
       </provider>
     </entry>

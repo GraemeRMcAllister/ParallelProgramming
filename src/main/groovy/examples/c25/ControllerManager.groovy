@@ -203,6 +203,11 @@ class ControllerManager implements CSProcess{
 						playerToChan.write(new EnrolDetails(id: -1))
 					}
 				}
+				else if (o instanceof selectedTile) {
+					for (x in 0 ..< playerMap.size()) {
+						toPlayers[x].write(o)
+					}
+				}
 				else if (o instanceof turnOver){
 
                     turnID = o.playerID
