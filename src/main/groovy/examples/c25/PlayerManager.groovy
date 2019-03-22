@@ -174,7 +174,7 @@ class PlayerManager implements CSProcess {
 			def turnID = gameDetails.turn
 
 			while (enroled) {
-//				def timer= new CSTimer(
+				def timer= new CSTimer()
 				timer.sleep (1000)
 				println("timer triggered")
 				def chosenPairs = [null, null]
