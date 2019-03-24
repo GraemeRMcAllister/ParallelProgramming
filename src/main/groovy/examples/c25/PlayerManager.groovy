@@ -138,7 +138,7 @@ class PlayerManager implements CSProcess {
 		def outerAlt = new ALT([validPoint, withdrawButton, fromController])
 		def VALIDPOINT = 0
 		def WITHDRAW = 1
-		def UPDATE = 3
+		def UPDATE = 2
 		
 		// connect to game controller
 		IPconfig.write("Now Connected - sending your name to Controller")
@@ -190,6 +190,7 @@ class PlayerManager implements CSProcess {
 				println("updated game")
 				int gameIdDisplay = gameId + 1
 				def playerIds = playerMap.keySet()
+				println playerMap.keySet()
 				def turnName = playerMap.get(turnID)[0]
 				IPconfig.write("Playing Game Number - $gameIdDisplay - " + turnName+"'s turn")
 
@@ -219,11 +220,12 @@ class PlayerManager implements CSProcess {
 						case FROMCONTROLLER:
 							def fromC = fromController.read()
 							if (fromC instanceof GameDetails) {
+								println "head that"
 								gameDetails = (GameDetails) fromC
 								turnID = gameDetails.turn
 								println("$turnID and $myPlayerId")
 								pairsMap = gameDetails.pairsSpecification
-								myPlayerId = gameDetails.playerID
+								//myPlayerId = gameDetails.playerID
 								notMatched = false
 							} else if (fromC instanceof selectedTile) {
 								changePairs(fromC.vpoint[0], fromC.vpoint[1], fromC.pairdata[1], fromC.pairdata[0])
@@ -238,7 +240,7 @@ class PlayerManager implements CSProcess {
 							break
 					}
 				}
-				while ((chosenPairs[1] == null) && (enroled) && (notMatched)) {
+				while ((chosenPairs[1] == null) && (enroled) && (notMatched) && (turnID == myPlayerId)) {
 					println "My Turn"
 					//IPlabel.write("Your Turn")
 					nextPairConfig.write("Your Turn")
@@ -258,6 +260,7 @@ class PlayerManager implements CSProcess {
 							chosenPairs[currentPair] = vPoint
 							currentPair = currentPair + 1
 							def pairData = pairsMap.get(vPoint)
+							println vPoint
 							toController.write(new selectedTile(vpoint:vPoint, pairdata:pairData))
 							def fromC = (selectedTile)fromController.read()
 							changePairs(fromC.vpoint[0], fromC.vpoint[1], fromC.pairdata[1], fromC.pairdata[0])
@@ -294,7 +297,13 @@ class PlayerManager implements CSProcess {
 							}
 							break
 						case UPDATE:
+							println ("updating")
 							gameDetails = (GameDetails)fromController.read()
+							gameId = gameDetails.gameId
+							playerMap = gameDetails.playerDetails
+							pairsMap = gameDetails.pairsSpecification
+							turnID = gameDetails.turn
+							myPlayerId = gameDetails.playerID
 							break
 					}// end of outer switch
 				} // end of while getting two pairs

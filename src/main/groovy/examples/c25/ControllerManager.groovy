@@ -182,7 +182,10 @@ class ControllerManager implements CSProcess{
 			def running = (pairsUnclaimed != 0)
 
 			while (running){
+				playerMap.removeAll ({ el -> el == null})
 				println "waiting to read"
+				println playerMap
+				println turnID
 				def o = fromPlayers.read()
                 println(o.toString())
 				if ( o instanceof EnrolPlayer) {
@@ -247,11 +250,16 @@ class ControllerManager implements CSProcess{
 				else if ( o instanceof GetGameDetails) {
 					def ggd = (GetGameDetails)o
 					def id = ggd.id
-					toPlayers[id].write(new GameDetails( playerDetails: playerMap,
-													 	 pairsSpecification: pairsMap,
-													     turn: turnID,
-														 gameId: gameId,
-							playerID:id))
+					if (toPlayers[id] == null){
+						println "fuck off"
+					}else{
+
+						toPlayers[id].write(new GameDetails(playerDetails: playerMap,
+								pairsSpecification: pairsMap,
+								turn: turnID,
+								gameId: gameId,
+								playerID: id))
+					}
 				} else if ( o instanceof ClaimPair) {
 					def claimPair = (ClaimPair)o
 					def gameNo = claimPair.gameId
@@ -293,16 +301,24 @@ class ControllerManager implements CSProcess{
 					def id = withdraw.id
 					def playerState = playerMap.get(id)
 					println "Player: ${playerState[0]} claimed ${playerState[1]} pairs"
+
 					playerNames[id].write("       ")
 					pairsWon[id].write("   ")
-					toPlayers[id] = null
 
-					/*for (x in id < playerMap.size()){
-						playerMap[x][1] = playerMap[x][1] - 1
-					}*/
-					availablePlayerIds << id
+
+					toPlayers[id] = null
+					playerMap[id] = null
+
+					println toPlayers
+
+					if (toPlayers[(id + 1)] == null) {
+						turnID = 0
+						println "no more players turn counter to 0"
+					}
+
+					availablePlayerIds.add(id)
 					availablePlayerIds =  availablePlayerIds.sort()
-					for (x in 0 ..< playerMap.size()-1) {
+					for (x in 0 ..< playerMap.size()) {
 						println playerMap
 						if (toPlayers[x] == null) {
 							if (toPlayers[(x + 1)] != null) {
@@ -317,19 +333,20 @@ class ControllerManager implements CSProcess{
 								availablePlayerIds.remove(x)
 								availablePlayerIds = availablePlayerIds.sort()
 							}
-							playerMap.remove(id)
-						}
-						else{
-							playerMap.remove(id)
+							else {
+								playerMap[id] = null
 							}
-						playerNames[x].write(playerMap[x][0])
-						pairsWon[x].write(" " + playerMap[x][1])
+						}
+						//playerNames[x].write(playerMap[x][0])
+						//pairsWon[x].write(" " + playerMap[x][1])
 					}
 					println "handled leave"
 					println playerMap
+					println "playermap size" + playerMap.size()
+					if (playerMap.size()==1) {
+						playerMap = [:]
+					}
 					for (x in 0 ..< playerMap.size()-1) {
-						def whatev = playerMap[x][0]
-						println "sending game to $whatev"
 						toPlayers[x].write(new GameDetails(playerDetails: playerMap,
 								pairsSpecification: pairsMap,
 								turn: turnID,
@@ -338,8 +355,8 @@ class ControllerManager implements CSProcess{
 						)
 					}
 					println "sent new game to all players connected"
-					println availablePlayerIds
-					println playerMap
+					println "avail IDs" +availablePlayerIds
+					println "Player map" + playerMap
 
 				} // end else if chain
 			} // while running
