@@ -182,6 +182,7 @@ class ControllerManager implements CSProcess{
 			def running = (pairsUnclaimed != 0)
 
 			while (running){
+				println "waiting to read"
 				def o = fromPlayers.read()
                 println(o.toString())
 				if ( o instanceof EnrolPlayer) {
@@ -225,7 +226,8 @@ class ControllerManager implements CSProcess{
 							toPlayers[x].write(new GameDetails(playerDetails: playerMap,
 									pairsSpecification: pairsMap,
 									turn: turnID,
-									gameId: gameId))
+									gameId: gameId,
+									playerID:x))
 						}
 					}
 					else {
@@ -235,7 +237,8 @@ class ControllerManager implements CSProcess{
 							toPlayers[x].write(new GameDetails(playerDetails: playerMap,
 									pairsSpecification: pairsMap,
 									turn: turnID,
-									gameId: gameId))
+									gameId: gameId,
+									playerID:x))
 						}
 
 					}
@@ -247,7 +250,8 @@ class ControllerManager implements CSProcess{
 					toPlayers[id].write(new GameDetails( playerDetails: playerMap,
 													 	 pairsSpecification: pairsMap,
 													     turn: turnID,
-														 gameId: gameId))
+														 gameId: gameId,
+							playerID:id))
 				} else if ( o instanceof ClaimPair) {
 					def claimPair = (ClaimPair)o
 					def gameNo = claimPair.gameId
@@ -275,7 +279,8 @@ class ControllerManager implements CSProcess{
 								toPlayers[x].write(new GameDetails(playerDetails: playerMap,
 										pairsSpecification: pairsMap,
 										turn: turnID,
-										gameId: gameId))
+										gameId: gameId,
+										playerID:x))
 							}
 
 						} 
@@ -291,14 +296,50 @@ class ControllerManager implements CSProcess{
 					playerNames[id].write("       ")
 					pairsWon[id].write("   ")
 					toPlayers[id] = null
+
+					/*for (x in id < playerMap.size()){
+						playerMap[x][1] = playerMap[x][1] - 1
+					}*/
 					availablePlayerIds << id
 					availablePlayerIds =  availablePlayerIds.sort()
-					for (x in 0 ..< playerMap.size()) {
+					for (x in 0 ..< playerMap.size()-1) {
+						println playerMap
+						if (toPlayers[x] == null) {
+							if (toPlayers[(x + 1)] != null) {
+								println playerMap[(x + 1)][0]
+								playerNames[(x)].write(playerMap[(x + 1)][0])
+								pairsWon[(x)].write(" " + playerMap[(x + 1)][1])
+								playerMap[x] = playerMap[(x + 1)]
+								playerMap[(x + 1)] = null
+								toPlayers[x] = toPlayers[(x + 1)]
+								toPlayers[(x + 1)] = null
+								availablePlayerIds << id
+								availablePlayerIds.remove(x)
+								availablePlayerIds = availablePlayerIds.sort()
+							}
+							playerMap.remove(id)
+						}
+						else{
+							playerMap.remove(id)
+							}
+						playerNames[x].write(playerMap[x][0])
+						pairsWon[x].write(" " + playerMap[x][1])
+					}
+					println "handled leave"
+					println playerMap
+					for (x in 0 ..< playerMap.size()-1) {
+						def whatev = playerMap[x][0]
+						println "sending game to $whatev"
 						toPlayers[x].write(new GameDetails(playerDetails: playerMap,
 								pairsSpecification: pairsMap,
 								turn: turnID,
-								gameId: gameId))
+								gameId: gameId,
+								playerID: x)
+						)
 					}
+					println "sent new game to all players connected"
+					println availablePlayerIds
+					println playerMap
 
 				} // end else if chain
 			} // while running

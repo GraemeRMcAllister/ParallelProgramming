@@ -112,42 +112,33 @@ class PlayerManager implements CSProcess {
 				else  return 2
 			}
 		}
-		
-		def outerAlt = new ALT([validPoint, withdrawButton])
-		def innerAlt = new ALT([nextButton, withdrawButton])
-		def NEXT = 0
-		def VALIDPOINT = 0
-		def WITHDRAW = 1
+
+
 		createBoard()
 		dList.set(display)
 		IPlabel.write("What is your name?")
 		def playerName = IPfield.read()
-		IPconfig.write(" ")
+		IPconfig.write("")
 		IPlabel.write("What is the IP address of the game controller?")
 		def controllerIP = IPfield.read().trim()
-		IPconfig.write(" ")
+		IPconfig.write("")
 		IPlabel.write("Connecting to the GameController")
 		
 		// create Node and Net Channel Addresses
 
 			def nodeAddr = new TCPIPNodeAddress(4000)
-
-		println(nodeAddr)
-		try {
-			println("trying")
 			Node.getInstance().init(nodeAddr)
-		}
-		catch(JCSPNetworkException e){
-			println("caught")
-			nodeAddr = new TCPIPNodeAddress(2000)
-			def Node2 = new Node()
-			println(nodeAddr)
-			Node2.getInstance().init(nodeAddr)
-		}
+
 		def toControllerAddr = new TCPIPNodeAddress ( controllerIP, 3000)
 		def toController = NetChannel.any2net(toControllerAddr, 50 )
 		def fromController = NetChannel.net2one()
 		def fromControllerLoc = fromController.getLocation()
+
+
+		def outerAlt = new ALT([validPoint, withdrawButton, fromController])
+		def VALIDPOINT = 0
+		def WITHDRAW = 1
+		def UPDATE = 3
 		
 		// connect to game controller
 		IPconfig.write("Now Connected - sending your name to Controller")
@@ -176,12 +167,13 @@ class PlayerManager implements CSProcess {
 			def playerMap = gameDetails.playerDetails
 			def pairsMap = gameDetails.pairsSpecification
 			def turnID = gameDetails.turn
+			myPlayerId = gameDetails.playerID
+
+			def waitAlt = new ALT ([fromController, withdrawButton])
+			def FROMCONTROLLER = 0
 
 			while (enroled) {
 				println "BACK TO TOP"
-				def timer= new CSTimer()
-				timer.sleep (1000)
-				println("timer triggered")
 				def chosenPairs = [null, null]
 				createBoard()
 				dList.change (display, 0)
@@ -192,21 +184,24 @@ class PlayerManager implements CSProcess {
 					playerMap = gameDetails.playerDetails
 					pairsMap = gameDetails.pairsSpecification
 					turnID = gameDetails.turn
+				myPlayerId = gameDetails.playerID
 
 
 				println("updated game")
 				int gameIdDisplay = gameId + 1
-				IPconfig.write("Playing Game Number - $gameIdDisplay")
 				def playerIds = playerMap.keySet()
+				def turnName = playerMap.get(turnID)[0]
+				IPconfig.write("Playing Game Number - $gameIdDisplay - " + turnName+"'s turn")
+
 
 				playerIds.each { p ->
+					println "players $p turn"
 					def pData = playerMap.get(p)
 					playerNames[p].write(pData[0])
 					pairsWon[p].write(" " + pData[1])
 				}
 
 				// now use pairsMap to create the board
-				//GameUpdate(gameDetails, changePairs)
 				def pairLocs = pairsMap.keySet()
 				pairLocs.each {loc ->
 					changePairs(loc[0], loc[1], Color.LIGHT_GRAY, -1)
@@ -214,26 +209,39 @@ class PlayerManager implements CSProcess {
 				def currentPair = 0
 				def notMatched = true
 				println("$turnID + $myPlayerId")
-				while(turnID != myPlayerId)
-				{
-					println ("current turnID $turnID")
+
+				while(turnID != myPlayerId) {
+
+					//IPlabel.write("Player $turnID's turn")
+					println("current turnID $turnID")
 					println "Waiting for other player"
-					def fromC = fromController.read()
-					if(fromC instanceof GameDetails) {
-						gameDetails = (GameDetails)fromC
-						turnID = gameDetails.turn
-						println("$turnID and $myPlayerId")
-						pairsMap = gameDetails.pairsSpecification
-						notMatched = false
-					}
-					else if (fromC instanceof selectedTile){
-						changePairs(fromC.vpoint[0], fromC.vpoint[1], fromC.pairdata[1], fromC.pairdata[0])
-						pairsMap = gameDetails.pairsSpecification
-						notMatched = false
+					switch ( waitAlt.select() ) {
+						case FROMCONTROLLER:
+							def fromC = fromController.read()
+							if (fromC instanceof GameDetails) {
+								gameDetails = (GameDetails) fromC
+								turnID = gameDetails.turn
+								println("$turnID and $myPlayerId")
+								pairsMap = gameDetails.pairsSpecification
+								myPlayerId = gameDetails.playerID
+								notMatched = false
+							} else if (fromC instanceof selectedTile) {
+								changePairs(fromC.vpoint[0], fromC.vpoint[1], fromC.pairdata[1], fromC.pairdata[0])
+								pairsMap = gameDetails.pairsSpecification
+								notMatched = false
+							}
+							break
+						case WITHDRAW:
+							withdrawButton.read()
+							toController.write(new WithdrawFromGame(id: myPlayerId))
+							enroled = false
+							break
 					}
 				}
 				while ((chosenPairs[1] == null) && (enroled) && (notMatched)) {
 					println "My Turn"
+					//IPlabel.write("Your Turn")
+					nextPairConfig.write("Your Turn")
 					pairsMap = gameDetails.pairsSpecification
 					getValidPoint.write (new GetValidPoint( side: side,
 															gap: gap,
@@ -256,13 +264,12 @@ class PlayerManager implements CSProcess {
 
 							def matchOutcome = pairsMatch(pairsMap, chosenPairs)
 							if ( matchOutcome == 2)  {
-								nextPairConfig.write("SELECT NEXT PAIR")
-								switch (innerAlt.select()){
-									case NEXT:
-                                        println("next")
-										nextButton.read()
-										nextPairConfig.write(" ")
+								nextPairConfig.write("Turn Over")
 
+								println("next")
+								def timer= new CSTimer()
+										timer.sleep(2000)
+										nextPairConfig.write("Awaiting Next Turn")
 										def p1 = chosenPairs[0]
 										def p2 = chosenPairs[1]
 										changePairs(p1[0], p1[1], Color.LIGHT_GRAY, -1)
@@ -274,13 +281,7 @@ class PlayerManager implements CSProcess {
 										toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
 										gameDetails = (GameDetails)fromController.read()
 										turnID = gameDetails.turn
-										break
-									case WITHDRAW:
-										withdrawButton.read()
-										toController.write(new WithdrawFromGame(id: myPlayerId))
-										enroled = false
-										break
-								} // end inner switch
+								// end inner switch
 							} else if ( matchOutcome == 1) {
 								notMatched = false
 								toController.write(new ClaimPair ( id: myPlayerId,
@@ -291,6 +292,9 @@ class PlayerManager implements CSProcess {
 								pairsMap = gameDetails.pairsSpecification
 								createBoard()
 							}
+							break
+						case UPDATE:
+							gameDetails = (GameDetails)fromController.read()
 							break
 					}// end of outer switch
 				} // end of while getting two pairs
