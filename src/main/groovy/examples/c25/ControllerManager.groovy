@@ -182,10 +182,9 @@ class ControllerManager implements CSProcess{
 			def running = (pairsUnclaimed != 0)
 
 			while (running){
-				playerMap.removeAll ({ el -> el == null})
 				println "waiting to read"
-				println playerMap
 				println turnID
+				pairsMap.values().removeIf(Objects::isNull)
 				def o = fromPlayers.read()
                 println(o.toString())
 				if ( o instanceof EnrolPlayer) {
@@ -253,7 +252,6 @@ class ControllerManager implements CSProcess{
 					if (toPlayers[id] == null){
 						println "fuck off"
 					}else{
-
 						toPlayers[id].write(new GameDetails(playerDetails: playerMap,
 								pairsSpecification: pairsMap,
 								turn: turnID,
@@ -316,6 +314,7 @@ class ControllerManager implements CSProcess{
 						println "no more players turn counter to 0"
 					}
 
+
 					availablePlayerIds.add(id)
 					availablePlayerIds =  availablePlayerIds.sort()
 					for (x in 0 ..< playerMap.size()) {
@@ -343,9 +342,10 @@ class ControllerManager implements CSProcess{
 					println "handled leave"
 					println playerMap
 					println "playermap size" + playerMap.size()
-					if (playerMap.size()==1) {
-						playerMap = [:]
-					}
+					//if (playerMap.size()==1) {
+					//	playerMap = [:]
+					//}
+
 					for (x in 0 ..< playerMap.size()-1) {
 						toPlayers[x].write(new GameDetails(playerDetails: playerMap,
 								pairsSpecification: pairsMap,
