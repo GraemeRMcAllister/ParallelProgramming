@@ -183,8 +183,6 @@ class ControllerManager implements CSProcess{
 
 			while (running){
 				println "waiting to read"
-				println turnID
-				pairsMap.values().removeIf(Objects::isNull)
 				def o = fromPlayers.read()
                 println(o.toString())
 				if ( o instanceof EnrolPlayer) {
@@ -220,30 +218,20 @@ class ControllerManager implements CSProcess{
 
                     println(id)
 
-					if (turnID+1 >= playerMap.size()){
-                        println("Back to player 0")
+					if (turnID+1 >= playerMap.size())
 						turnID = 0
-                        println("sent new game")
-						for (x in 0 ..< playerMap.size()) {
-							toPlayers[x].write(new GameDetails(playerDetails: playerMap,
-									pairsSpecification: pairsMap,
-									turn: turnID,
-									gameId: gameId,
-									playerID:x))
-						}
-					}
-					else {
-                        println("next players turn")
-                        turnID = turnID+1
-						for (x in 0 ..< playerMap.size()) {
-							toPlayers[x].write(new GameDetails(playerDetails: playerMap,
-									pairsSpecification: pairsMap,
-									turn: turnID,
-									gameId: gameId,
-									playerID:x))
-						}
+						else
+						turnID++
 
-					}
+                        println("sent new game")
+
+						for (x in 0 ..< playerMap.size()) {
+							toPlayers[x].write(new GameDetails(playerDetails: playerMap,
+									pairsSpecification: pairsMap,
+									turn: turnID,
+									gameId: gameId,
+									playerID:x))
+						}
 
 				}
 				else if ( o instanceof GetGameDetails) {
@@ -261,7 +249,7 @@ class ControllerManager implements CSProcess{
 				} else if ( o instanceof ClaimPair) {
 					def claimPair = (ClaimPair)o
 					def gameNo = claimPair.gameId
-					def id = claimPair.id
+					int id = claimPair.id
 					def p1 = claimPair.p1
 					def p2 = claimPair.p2
 					if ( gameId == gameNo){
@@ -271,6 +259,8 @@ class ControllerManager implements CSProcess{
 							//pairsMap.each {println "$it"}
 							pairsMap.remove(p2)
 							pairsMap.remove(p1)
+							changePairs(p1[0], p1[1], Color.WHITE, 1)
+							changePairs(p2[0], p2[1], Color.WHITE, 1)
 							//println "after remove of $p1, $p2"
 							//pairsMap.each {println "$it"}
 							def playerState = playerMap.get(id)
@@ -293,8 +283,10 @@ class ControllerManager implements CSProcess{
 						else {
 							//println "cannot claim pair: $p1, $p2"
 						}
+
 					}	
 				} else {
+					println playerMap
 					def withdraw = (WithdrawFromGame)o
 					def id = withdraw.id
 					def playerState = playerMap.get(id)
@@ -331,9 +323,12 @@ class ControllerManager implements CSProcess{
 								availablePlayerIds << id
 								availablePlayerIds.remove(x)
 								availablePlayerIds = availablePlayerIds.sort()
+
 							}
 							else {
 								playerMap[id] = null
+								playerNames[x].write("Player " + id)
+								pairsWon[x].write(" ")
 							}
 						}
 						//playerNames[x].write(playerMap[x][0])
@@ -346,7 +341,14 @@ class ControllerManager implements CSProcess{
 					//	playerMap = [:]
 					//}
 
-					for (x in 0 ..< playerMap.size()-1) {
+					println "before clean" + playerMap
+					playerMap = CleanMap(playerMap)
+					println "after clean" +  playerMap
+
+					println toPlayers.size() + "" + toPlayers.toArray()
+
+
+					for (x in 0 ..< playerMap.size()) {
 						toPlayers[x].write(new GameDetails(playerDetails: playerMap,
 								pairsSpecification: pairsMap,
 								turn: turnID,
@@ -362,6 +364,19 @@ class ControllerManager implements CSProcess{
 			} // while running
 			createBoard()
 			dList.change(display, 0)	
-		} // end while true		
+		} // end while true
+
 	} // end run
+
+	def CleanMap(HashMap playerMap){
+		def tempMap = [:]
+		for(p in playerMap)
+			if (p.value!=null)
+				tempMap.put(p)
+
+		playerMap.clear()
+		playerMap = tempMap
+		return playerMap
+		println playerMap
+	}
 }

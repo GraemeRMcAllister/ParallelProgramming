@@ -135,7 +135,7 @@ class PlayerManager implements CSProcess {
 		def fromControllerLoc = fromController.getLocation()
 
 
-		def outerAlt = new ALT([validPoint, withdrawButton, fromController])
+		def turnAlt = new ALT([validPoint, withdrawButton, fromController])
 		def VALIDPOINT = 0
 		def WITHDRAW = 1
 		def UPDATE = 2
@@ -248,7 +248,7 @@ class PlayerManager implements CSProcess {
 					getValidPoint.write (new GetValidPoint( side: side,
 															gap: gap,
 															pairsMap: pairsMap))
-					switch ( outerAlt.select() ) {
+					switch ( turnAlt.select() ) {
 						case WITHDRAW:	
 							withdrawButton.read()
 							toController.write(new WithdrawFromGame(id: myPlayerId))
@@ -266,26 +266,26 @@ class PlayerManager implements CSProcess {
 							changePairs(fromC.vpoint[0], fromC.vpoint[1], fromC.pairdata[1], fromC.pairdata[0])
 
 							def matchOutcome = pairsMatch(pairsMap, chosenPairs)
-							if ( matchOutcome == 2)  {
+							if ( matchOutcome == 2) {
 								nextPairConfig.write("Turn Over")
-
 								println("next")
-								def timer= new CSTimer()
-										timer.sleep(2000)
-										nextPairConfig.write("Awaiting Next Turn")
-										def p1 = chosenPairs[0]
-										def p2 = chosenPairs[1]
-										changePairs(p1[0], p1[1], Color.LIGHT_GRAY, -1)
-										changePairs(p2[0], p2[1], Color.LIGHT_GRAY, -1)
-										chosenPairs = [null, null]
-										currentPair = 0
-										notMatched = false
-										println("playerID:$myPlayerId my turn is over GameID:$gameId")
-										toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
-										gameDetails = (GameDetails)fromController.read()
-										turnID = gameDetails.turn
-								// end inner switch
+								def timer = new CSTimer()
+								timer.sleep(1500)
+								nextPairConfig.write("Awaiting Next Turn")
+								def p1 = chosenPairs[0]
+								def p2 = chosenPairs[1]
+								changePairs(p1[0], p1[1], Color.LIGHT_GRAY, -1)
+								changePairs(p2[0], p2[1], Color.LIGHT_GRAY, -1)
+								chosenPairs = [null, null]
+								currentPair = 0
+								notMatched = false
+								println("playerID:$myPlayerId my turn is over GameID:$gameId")
+								toController.write(new turnOver(playerID: myPlayerId, gameID: gameId))
+								gameDetails = (GameDetails) fromController.read()
+								turnID = gameDetails.turn
 							} else if ( matchOutcome == 1) {
+								def timer= new CSTimer()
+								timer.sleep(1500)
 								notMatched = false
 								toController.write(new ClaimPair ( id: myPlayerId,
 												   	   			   gameId: gameId,
