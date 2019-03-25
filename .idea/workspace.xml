@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38ef11f1-78dc-4289-a688-dd8dd3a5a495" name="Default Changelist" comment="" />
+    <list default="true" id="38ef11f1-78dc-4289-a688-dd8dd3a5a495" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/examples/c25/ControllerManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -38,23 +42,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="groovy" value="926" />
+          <entry key="groovy" value="1439" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="926" />
+          <entry key="Groovy" value="1439" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="248" column="22" selection-start-line="248" selection-start-column="22" selection-end-line="248" selection-end-column="37" />
+            <state relative-caret-position="441">
+              <caret line="254" column="41" lean-forward="true" selection-start-line="254" selection-start-column="41" selection-end-line="254" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -68,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="333" column="51" lean-forward="true" selection-start-line="333" selection-start-column="51" selection-end-line="333" selection-end-column="51" />
+            <state relative-caret-position="189">
+              <caret line="340" column="50" lean-forward="true" selection-start-line="340" selection-start-column="50" selection-end-line="340" selection-end-column="50" />
               <folding>
                 <element signature="e#22#39#0" expanded="true" />
               </folding>
@@ -434,8 +438,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/groovy/examples/c25/ClaimPair.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy" />
       </list>
     </option>
   </component>
@@ -530,7 +534,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553527082962" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553529141345" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="android.dex.compiler" />
@@ -591,15 +595,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553514774928</updated>
-      <workItem from="1553514777309" duration="12053000" />
+      <workItem from="1553514777309" duration="14026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12053000" />
+    <option name="totallyTimeSpent" value="14026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -664,16 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="333" column="51" lean-forward="true" selection-start-line="333" selection-start-column="51" selection-end-line="333" selection-end-column="51" />
-          <folding>
-            <element signature="e#22#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cspforjava/jcsp/1.1.0/92df574ad4ff24237f1d6acfc8d68e023cc3c57b/jcsp-1.1.0-sources.jar!/jcsp/net2/LinkServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -683,8 +678,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/PlayerManager.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="248" column="22" selection-start-line="248" selection-start-column="22" selection-end-line="248" selection-end-column="37" />
+        <state relative-caret-position="441">
+          <caret line="254" column="41" lean-forward="true" selection-start-line="254" selection-start-column="41" selection-end-line="254" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/examples/c25/ControllerManager.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="340" column="50" lean-forward="true" selection-start-line="340" selection-start-column="50" selection-end-line="340" selection-end-column="50" />
+          <folding>
+            <element signature="e#22#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

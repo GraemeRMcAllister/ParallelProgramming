@@ -302,8 +302,14 @@ class ControllerManager implements CSProcess{
 					println toPlayers
 
 
-					if(turnID>id) // if leaving player, has already taken turn this round, decrease turnID to match decrease in ID
+					if(turnID>=id) // if leaving player, has already taken turn this round, decrease turnID to match decrease in ID
 						turnID = turnID -1
+
+					if (turnID == playerMap.size()-1 || turnID<0)
+						turnID = 0
+
+					//if(turnID<0)
+					//	turnID = 0
 
 
 					/*
