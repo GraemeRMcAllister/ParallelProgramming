@@ -302,13 +302,29 @@ class ControllerManager implements CSProcess{
 					println toPlayers
 
 
+					if(turnID>id) // if leaving player, has already taken turn this round, decrease turnID to match decrease in ID
+						turnID = turnID -1
+
+
+					/*
+
+					if (toPlayers[(id + 1)]!=null && id>turnID && turnID!=0 ) //if this player is not null means is the player that leaves was not the last one on the list
+							turnID - 1
+
+					else if (turnID!=0 ){
+
+					}
+
+
 					if (toPlayers[(id + 1)] != null && turnID == id) {
 						turnID
 						println "no more players turn counter to 0"
 					}
-					else if(toPlayers[(id + 1)] == null)
+					else if(toPlayers[(id + 1)] != null)
 						if(turnID!=0)
 						turnID = turnID -1
+
+					*/
 
 
 					availablePlayerIds.add(id)
