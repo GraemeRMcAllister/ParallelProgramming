@@ -23,7 +23,7 @@ class PlayerManager implements CSProcess {
 	ChannelInput validPoint
 	ChannelOutput nextPairConfig
 	
-	int maxPlayers = 8
+	int maxPlayers = 5
 	int side = 50
 	int minPairs = 3
 	int maxPairs = 6
@@ -198,11 +198,19 @@ class PlayerManager implements CSProcess {
 				def turnName = playerMap.get(turnID)[0]
 				IPconfig.write("Playing Game Number - $gameIdDisplay - " + turnName+"'s turn")
 
+				int i
+				playerNames.size() { p ->
+					def pData = playerMap.get(p)
+					playerNames[p].write("Player " + i)
+					pairsWon[p].write(" " + 0)
+
+				}
 
 				playerIds.each { p ->
 					def pData = playerMap.get(p)
 					playerNames[p].write(pData[0])
 					pairsWon[p].write(" " + pData[1])
+
 				}
 
 				// now use pairsMap to create the board
