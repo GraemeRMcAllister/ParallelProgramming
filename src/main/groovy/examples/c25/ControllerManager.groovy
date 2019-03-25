@@ -313,7 +313,7 @@ class ControllerManager implements CSProcess{
 
 					availablePlayerIds.add(id)
 					availablePlayerIds =  availablePlayerIds.sort()
-					for (x in 0 ..< playerMap.size()-1) {
+					for (x in 0 ..< playerMap.size()) {
 						println playerMap
 						if (toPlayers[x] == null) {
 							if (toPlayers[(x + 1)] != null) {
@@ -329,8 +329,6 @@ class ControllerManager implements CSProcess{
 								availablePlayerIds << (id + 1)
 								availablePlayerIds.remove(x)
 								availablePlayerIds = availablePlayerIds.sort()
-
-
 							}
 							else {
 								playerMap[id] = null

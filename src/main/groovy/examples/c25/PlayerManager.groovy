@@ -141,8 +141,10 @@ class PlayerManager implements CSProcess {
 		
 		// connect to game controller
 		IPconfig.write("Now Connected - sending your name to Controller")
+
 		def enrolPlayer = new EnrolPlayer( name: playerName,
 										   toPlayerChannelLocation: fromControllerLoc)
+
 		toController.write(enrolPlayer)
 		def enrolDetails = (EnrolDetails)fromController.read()
 		def myPlayerId = enrolDetails.id
@@ -177,15 +179,16 @@ class PlayerManager implements CSProcess {
 				println "BACK TO TOP"
 				def chosenPairs = [null, null]
 				createBoard()
-				dList.change (display, 0)
+				dList.change(display, 0)
 				toController.write(new GetGameDetails(id: myPlayerId))
-				gameDetails = (GameDetails)fromController.read()
-					//GameDetails = (GameDetails)fc
-					gameId = gameDetails.gameId
-					playerMap = gameDetails.playerDetails
-					pairsMap = gameDetails.pairsSpecification
-					turnID = gameDetails.turn
+				gameDetails = (GameDetails) fromController.read()
+				//GameDetails = (GameDetails)fc
+				gameId = gameDetails.gameId
+				playerMap = gameDetails.playerDetails
+				pairsMap = gameDetails.pairsSpecification
+				turnID = gameDetails.turn
 				myPlayerId = gameDetails.playerID
+
 
 
 				println("updated game")
@@ -197,7 +200,6 @@ class PlayerManager implements CSProcess {
 
 
 				playerIds.each { p ->
-					println "players $p turn"
 					def pData = playerMap.get(p)
 					playerNames[p].write(pData[0])
 					pairsWon[p].write(" " + pData[1])
@@ -221,7 +223,7 @@ class PlayerManager implements CSProcess {
 						case FROMCONTROLLER:
 							def fromC = fromController.read()
 							if (fromC instanceof GameDetails) {
-								println "head that"
+								println "heard that"
 								gameDetails = (GameDetails) fromC
 								turnID = gameDetails.turn
 								println("$turnID and $myPlayerId")
@@ -311,6 +313,7 @@ class PlayerManager implements CSProcess {
 							pairsMap = gameDetails.pairsSpecification
 							turnID = gameDetails.turn
 							myPlayerId = gameDetails.playerID
+							notMatched = false
 							break
 					}// end of outer switch
 				} // end of while getting two pairs
@@ -323,4 +326,5 @@ class PlayerManager implements CSProcess {
 	} // end run
 
 
-}				
+}
+
