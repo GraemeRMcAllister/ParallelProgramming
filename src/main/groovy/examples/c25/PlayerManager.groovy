@@ -241,6 +241,7 @@ class PlayerManager implements CSProcess {
 							toController.write(new WithdrawFromGame(id: myPlayerId))
 							enroled = false
 							IPlabel.write("Goodbye " + playerName + ", please close game window")
+							createBoard()
 							break
 					}
 				}
@@ -261,6 +262,7 @@ class PlayerManager implements CSProcess {
 							withdrawButton.read()
 							toController.write(new WithdrawFromGame(id: myPlayerId))
 							enroled = false
+							createBoard()
 							break						
 						case VALIDPOINT:
                             println("valid point")

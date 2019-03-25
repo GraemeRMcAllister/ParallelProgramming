@@ -331,7 +331,7 @@ class ControllerManager implements CSProcess{
 								availablePlayerIds = availablePlayerIds.sort()
 							}
 							else {
-								playerMap[id] = null
+								playerMap[x] = null
 								playerNames[x].write("Player " + id)
 								pairsWon[x].write(" ")
 							}
