@@ -288,7 +288,7 @@ class ControllerManager implements CSProcess{
 				} else {
 					println playerMap
 					def withdraw = (WithdrawFromGame)o
-					def id = withdraw.id
+					int id = withdraw.id
 					def playerState = playerMap.get(id)
 					println "Player: ${playerState[0]} claimed ${playerState[1]} pairs"
 
@@ -301,28 +301,35 @@ class ControllerManager implements CSProcess{
 
 					println toPlayers
 
-					if (toPlayers[(id + 1)] == null) {
-						turnID = 0
+
+					if (toPlayers[(id + 1)] != null && turnID == id) {
+						turnID
 						println "no more players turn counter to 0"
 					}
+					else if(toPlayers[(id + 1)] == null)
+						if(turnID!=0)
+						turnID = turnID -1
 
 
 					availablePlayerIds.add(id)
 					availablePlayerIds =  availablePlayerIds.sort()
-					for (x in 0 ..< playerMap.size()) {
+					for (x in 0 ..< playerMap.size()-1) {
 						println playerMap
 						if (toPlayers[x] == null) {
 							if (toPlayers[(x + 1)] != null) {
 								println playerMap[(x + 1)][0]
 								playerNames[(x)].write(playerMap[(x + 1)][0])
 								pairsWon[(x)].write(" " + playerMap[(x + 1)][1])
+								playerNames[(x+1)].write("Player " + id+1)
+								pairsWon[(x+1)].write(" ")
 								playerMap[x] = playerMap[(x + 1)]
 								playerMap[(x + 1)] = null
 								toPlayers[x] = toPlayers[(x + 1)]
 								toPlayers[(x + 1)] = null
-								availablePlayerIds << id
+								availablePlayerIds << (id + 1)
 								availablePlayerIds.remove(x)
 								availablePlayerIds = availablePlayerIds.sort()
+
 
 							}
 							else {
@@ -349,6 +356,7 @@ class ControllerManager implements CSProcess{
 
 
 					for (x in 0 ..< playerMap.size()) {
+						println x
 						toPlayers[x].write(new GameDetails(playerDetails: playerMap,
 								pairsSpecification: pairsMap,
 								turn: turnID,
@@ -370,9 +378,12 @@ class ControllerManager implements CSProcess{
 
 	def CleanMap(HashMap playerMap){
 		def tempMap = [:]
-		for(p in playerMap)
-			if (p.value!=null)
-				tempMap.put(p)
+		for(p in playerMap) {
+			println p
+			if (p.value != null) {
+				tempMap.put(p.key, p.value)
+			}
+		}
 
 		playerMap.clear()
 		playerMap = tempMap
