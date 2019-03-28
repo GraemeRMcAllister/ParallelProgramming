@@ -205,9 +205,9 @@ class PlayerManager implements CSProcess {
 					pairsWon[p].write(" " + 0)
 
 				} */
-				for (x in 0..(playerMap.size + 1))
+				for (x in 0..(playerMap.size() - 1))
 				{
-					def pData = playerMap.get(p)
+					def pData = playerMap.get(x)
 					playerNames[x].write(pData[0])
 					pairsWon[x].write(" " + pData[1])
 
