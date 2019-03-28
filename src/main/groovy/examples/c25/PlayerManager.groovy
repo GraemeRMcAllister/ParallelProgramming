@@ -205,11 +205,15 @@ class PlayerManager implements CSProcess {
 					pairsWon[p].write(" " + 0)
 
 				} */
-				for (x in 0..(playerMap.size() - 1))
+				for (x in 0..(playerMap.size()))
 				{
-					def pData = playerMap.get(x)
-					playerNames[x].write(pData[0])
-					pairsWon[x].write(" " + pData[1])
+					if (playerMap.size() < x) {
+						def pData = playerMap.get(x)
+						playerNames[x].write(pData[0])
+						pairsWon[x].write(" " + pData[1])
+					}else{
+						playerNames[x].write("WORKS")
+					}
 
 				}
 
@@ -230,7 +234,16 @@ class PlayerManager implements CSProcess {
 				println("$turnID + $myPlayerId")
 
 				while(turnID != myPlayerId) {
-
+					for (x in 0..(playerMap.size()))
+					{
+						if (playerMap.size() < x) {
+							def pData = playerMap.get(x)
+							playerNames[x].write(pData[0])
+							pairsWon[x].write(" " + pData[1])
+						}else{
+							playerNames[x].write("WORKS")
+						}
+					}
 					//IPlabel.write("Player $turnID's turn")
 					println("current turnID $turnID")
 					println "Waiting for other player"
@@ -262,6 +275,16 @@ class PlayerManager implements CSProcess {
 				}
 				while ((chosenPairs[1] == null) && (enroled) && (notMatched) && (turnID == myPlayerId)) {
 					println "My Turn"
+					for (x in 0..(playerMap.size()))
+					{
+						if (playerMap.size() < x) {
+							def pData = playerMap.get(x)
+							playerNames[x].write(pData[0])
+							pairsWon[x].write(" " + pData[1])
+						}else{
+							playerNames[x].write("WORKS")
+						}
+					}
 					//IPlabel.write("Your Turn")
 					nextPairConfig.write("Your Turn")
 					pairsMap = gameDetails.pairsSpecification
