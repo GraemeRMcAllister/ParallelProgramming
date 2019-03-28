@@ -205,13 +205,20 @@ class PlayerManager implements CSProcess {
 					pairsWon[p].write(" " + 0)
 
 				} */
+				for (x in 0..(playerMap.size + 1))
+				{
+					def pData = playerMap.get(p)
+					playerNames[x].write(pData[0])
+					pairsWon[x].write(" " + pData[1])
 
-				playerIds.each { p ->
+				}
+
+				/*playerIds.each { p ->
 					def pData = playerMap.get(p)
 					playerNames[p].write(pData[0])
 					pairsWon[p].write(" " + pData[1])
 
-				}
+				}*/
 
 				// now use pairsMap to create the board
 				def pairLocs = pairsMap.keySet()
