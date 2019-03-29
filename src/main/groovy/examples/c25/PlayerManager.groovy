@@ -212,7 +212,7 @@ class PlayerManager implements CSProcess {
 						pairsWon[x].write(" " + pData[1])
 					}else{
 						playerNames[x].write('Player ' + x)
-						pairsWon[x].write(" ")
+					//	pairsWon[x].write(" ")
 					}
 
 				}
