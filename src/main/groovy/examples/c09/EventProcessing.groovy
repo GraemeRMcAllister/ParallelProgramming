@@ -15,8 +15,8 @@ class EventProcessing implements CSProcess{
   
   void run() {
     def mux2udd = Channel.one2one()
-    def udd2prn = Channel.one2one()    
-    def pList = [  
+    def udd2prn = Channel.one2one()
+    def pList = [
                    new FairMultiplex ( inChannels: eventStreams,
                                         outChannel: mux2udd.out() ),
 /*                   

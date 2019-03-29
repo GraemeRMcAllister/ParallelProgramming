@@ -23,6 +23,7 @@ class GSquares implements CSProcess {
                       // then run the network again using TestGSCopy
                       // you will then be able to compare the behaviour and also to
                       // explain why this happens!
+                      new GSPairsB(inChannel: I2P.in(), outChannel: outChannel)
                     ]
     new PAR ( testList ).run()  
   }

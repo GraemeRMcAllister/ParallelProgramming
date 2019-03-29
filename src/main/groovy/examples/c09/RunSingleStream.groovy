@@ -10,6 +10,7 @@ import groovyJCSP.plugAndPlay.*
 def eg2h = Channel.one2one()
 def h2udd = Channel.one2one()
 def udd2prn = Channel.one2one()
+def checkedChannel = Channel.one2one()
 def eventTestList = [ 
       new EventGenerator ( source: 1, 
                            initialValue: 100, 
@@ -20,8 +21,11 @@ def eventTestList = [
 					   
       new EventHandler ( inChannel: eg2h.in(), 
                          outChannel: h2udd.out() ),
+
+	  new checkMissed( inChannel: h2udd.in(),
+						  checkedOut: checkedChannel.out()),
 					 
-      new UniformlyDistributedDelay ( inChannel:h2udd.in(), 
+      new UniformlyDistributedDelay ( inChannel:checkedChannel.in(),
                                       outChannel: udd2prn.out(), 
                                       minTime: 1000, 
                                       maxTime: 2000 ), 

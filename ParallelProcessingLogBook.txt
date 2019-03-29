@@ -191,8 +191,72 @@ Exercise 3.1:
 
 				Process finished with exit code -1
 
+Exercise 3.2:
+		TestGSCopy.groovy:
+			GSPairsA:
+				def testList =  [ new GNumbers   ( outChannel: N2I.out() ),
+						  new GIntegrate ( inChannel: N2I.in(), 
+										   outChannel: I2P.out() ),
+						  // you will need to modify thi twice
+						  //first modification is to insert a constructor for GSPairsA
+						  // then run the network using TestGSCopy
+						  //second modification replace the constructor for GSPairsA with GSPairsB
+						  // then run the network again using TestGSCopy
+						  // you will then be able to compare the behaviour and also to
+						  // explain why this happens!
+						  new GSPairsA(inChannel: I2P.in(), outChannel: outChannel)
+						]
 				
+				Output:
+					Squares DEADLOCK
 				
+			GSPairsB:
+				def testList =  [ new GNumbers   ( outChannel: N2I.out() ),
+						  new GIntegrate ( inChannel: N2I.in(), 
+										   outChannel: I2P.out() ),
+						  // you will need to modify thi twice
+						  //first modification is to insert a constructor for GSPairsA
+						  // then run the network using TestGSCopy
+						  //second modification replace the constructor for GSPairsA with GSPairsB
+						  // then run the network again using TestGSCopy
+						  // you will then be able to compare the behaviour and also to
+						  // explain why this happens!
+						  new GSPairsB(inChannel: I2P.in(), outChannel: outChannel)
+						]
+				
+				Ouput:
+					Squares
+					1
+					4
+					9
+					16
+					25
+					36
+					49
+					64
+					81
+					100
+					121
+					DOES NOT DEADLOCK
+		
+		Conclusion: 
+			- The difference between GSPairsA and GSPairsB is the fact that the output channels have been changed around.
+			- GPCopy makes two copies of the first value passed by GPrefix, which will be 0. 
+			- The first output will go to tail which will then drop that first value, being 0.
+			- GPCopy will then send the second 0 to GPlus which will wait for another value to so it can add the two values together.
+			- By this time the second value (which will be 1) is being passed into GCopy by GPrefix and be instantly passed to tail which is now ready to write the
+			  next value it receives to GPlus.
+			- By this time the queue will be cleared between GPCopy and GPlus so it can write the next value thus not causing a deadlock.
+			- However, if the write order is changed between GPCopy to GPlus and Tail there will already be a value sitting in GPlus waiting for the value coming from tail
+			  which will not be written until GPCopy has written to GPlus again and therefore causing a deadlock as the channel will already be full with a value.
+			  
+Exercise 3.3:
+		Conclusion:
+			GPrint only has one input channel meaning it can only be written to one at a time or by creating multiple instances of the same process, being GPrint. However, if you use
+			GParPrint it contains an array/list of channels which you can define and then write to depending on what you are doing. This means instead of having multiple processes
+			you can just have one process with multiple input channels therefore it being less intensive on the system.
+
+					
 Exercise 4.1:
 		- Now when you input a new value in the reset value generator it starts a new counter from 0 but maintains the original counter which has started from 1000
 		- However if you enter in a second reset value it causes a deadlock. This means there is no value coming from GSuccessor to ResetPrefix. This is caused because we have
@@ -339,7 +403,10 @@ Exercise 5.2:
 			  } //end-switch
 			} //end-while
 		  } //end-run
-		  
+	Conclusion:
+		Using pre-conditions is a more elegant solution because we can more easily control the flow of the scaler. There is also some duplicate code that could be removed in the nested alt version. This is the SUSPENDED_IN and NORMAL_IN.
+		Using pre-cons we can also reduce the amount of alts needed to one and thus making it less confusing to control which alt is currently selected using the pre conditions. Using pre conditions also allows
+		us to prioritize processes in a more efficient way. 
 
 Exercise 6.1:
 	GenerateSetsOfEight:
@@ -411,37 +478,116 @@ CLIENT REQUEST Sever: 2 clients request 6 Datamap: [11:110, 12:120, 13:130, 14:1
 
 
 	Conclusion:
-
-
-By adding the print statements in both the client and server classes we can see which client is requesting the data and what they are requesting. We can also tell which server has received the request and what values they currently have in their datamap. From this we can see that if both servers do not have the value needed by the client and they need to transfer the data to each other and therefore both servers will be acting as a client requesting at the same time causing the deadlock.
+	By adding the print statements in both the client and server classes we can see which client is requesting the data and what they are requesting. 
+	We can also tell which server has received the request and what values they currently have in their datamap. 
+	From this we can see that if both servers do not have the value needed by the client and they need to transfer the data to each other, 
+	therefore both servers will be acting as a client requesting at the same time causing the deadlock.
 
 Exercise 8-1:
+	
+	Client:
+	
+		for ( i in 0 ..< iterations) {
+		  def key = selectList[i]
+		  requestChannel.write(key)
+		  println "Client $clientNumber is requesting $key"
+		  def v = receiveChannel.read()
+		  println "Client $clientNumber is recieving $v"
+		  if( key == v / 10 )
+			println "Server returned correct value. " + key + ":" + v
+		  else
+			println "Server returned incorrect value. " + key + ":" + v
+		}
 
-for ( i in 0 ..< iterations) {
-  def key = selectList[i]
-  requestChannel.write(key)
-  println "Client $clientNumber is requesting $key"
-  def v = receiveChannel.read()
-  println "Client $clientNumber is recieving $v"
-  if( key == v / 10 )
-    println "Server returned correct value. " + key + ":" + v
-  else
-    println "Server returned incorrect value. " + key + ":" + v
-}
 
+	Output for correct value received:
 
-Output for correct value received:
+		Client 1 is recieving 140
+		CLIENT REQUEST Sever: 2 Data map contains 14 writing 140 to client Server 2 has datamap [11:110, 12:120, 13:130, 14:140, 15:150, 16:160, 17:170, 18:180, 19:190, 20:200]
+		Server returned correct value. 14:140
 
-Client 1 is recieving 140
-CLIENT REQUEST Sever: 2 Data map contains 14 writing 140 to client Server 2 has datamap [11:110, 12:120, 13:130, 14:140, 15:150, 16:160, 17:170, 18:180, 19:190, 20:200]
-Server returned correct value. 14:140
+		Output for incorrect value received:
 
-Output for incorrect value received:
+		Client 1 is requesting 13
+		Client 0 is recieving 50
+		CLIENT REQUEST Sever: 1 Data map contains 3 writing 50 to client Server 1 has datamap [1:10, 2:20, 3:50, 4:40, 5:50, 6:60, 7:70, 8:80, 9:90, 10:100]
 
-Client 1 is requesting 13
-Client 0 is recieving 50
-CLIENT REQUEST Sever: 1 Data map contains 3 writing 50 to client Server 1 has datamap [1:10, 2:20, 3:50, 4:40, 5:50, 6:60, 7:70, 8:80, 9:90, 10:100]
+		CLIENT REQUEST Sever: 2 clients request 13 Datamap: [11:110, 12:120, 13:130, 14:140, 15:150, 16:160, 17:170, 18:180, 19:190, 20:200]
+		Server returned incorrect value. 3:50
 
-CLIENT REQUEST Sever: 2 clients request 13 Datamap: [11:110, 12:120, 13:130, 14:140, 15:150, 16:160, 17:170, 18:180, 19:190, 20:200]
-Server returned incorrect value. 3:50
+		
+Exercise 9-1:
+	RunSingleStream.groovy:
+		def eventTestList = [ 
+		  new EventGenerator ( source: 1, 
+							   initialValue: 100, 
+							   iterations: 100, 
+							   outChannel: eg2h.out(), 
+							   minTime: 100, 
+							   maxTime:200 ),
+						   
+		  new EventHandler ( inChannel: eg2h.in(), 
+							 outChannel: h2udd.out() ),
 
+		  new checkMissed( inChannel: h2udd.in(),
+							  checkedOut: checkedChannel.out()),
+						 
+		  new UniformlyDistributedDelay ( inChannel:checkedChannel.in(),
+										  outChannel: udd2prn.out(), 
+										  minTime: 1000, 
+										  maxTime: 2000 ), 
+									  
+		  new GPrint ( inChannel: udd2prn.in(),
+						heading : "Event Output",
+						delay: 0)
+		  ]
+		
+		checkMissed:
+			class checkMissed implements  CSProcess{
+			ChannelInput inChannel
+			ChannelOutput checkedOut
+			void run(){
+				def eventObj = inChannel.read()
+				def previousData = eventObj.data
+				checkedOut.write(eventObj.copy())
+				def expected = previousData + eventObj.missed + 1
+				while (true){
+					eventObj = inChannel.read().copy()
+					expected = previousData + eventObj.missed + 1
+
+					if(expected != eventObj.data){
+						println "Expected does n ot equal previous"
+					}
+
+					println "[ Previous value: " + previousData + "] Missed: [" + eventObj.missed + "] Next expected ["+
+							expected + "]"
+					previousData = expected
+					checkedOut.write(eventObj)
+				}
+			}
+		}
+		
+		Output:
+			Event Output
+			Event Generator for source 1 has started
+			[ Previous value: 100] Missed: [0] Next expected [101]
+			[ Previous value: 101] Missed: [0] Next expected [102]
+			EventData -> [source: 1, data: 100, missed: 0]
+			EventData -> [source: 1, data: 101, missed: 0]
+			[ Previous value: 102] Missed: [8] Next expected [111]
+			EventData -> [source: 1, data: 102, missed: 0]
+			[ Previous value: 111] Missed: [8] Next expected [120]
+			EventData -> [source: 1, data: 111, missed: 8]
+			[ Previous value: 120] Missed: [9] Next expected [130]
+			EventData -> [source: 1, data: 120, missed: 8]
+			[ Previous value: 130] Missed: [12] Next expected [143]
+
+Exercise 9-2:
+	Conclusion:
+		The UniformlyDistributedDelay will take the difference between minimum time for the delay and maxTime for the delay and adds a random integer to minTime make the time between each event random. 
+		Changing the min and max amount of time for the UniformlyDistributedDelay causes a greater
+
+		
+
+Exercise 11-1:
+	

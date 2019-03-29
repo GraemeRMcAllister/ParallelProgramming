@@ -20,11 +20,12 @@ def sourcesList = ( 0 ..< sources).collect { i ->
             new EventSource ( source: i+1, 
                               outChannel: es2ep[i].out(),
                               minTime: minTimes[i],
-                              maxTime: maxTimes[i] ) 
+                              maxTime: maxTimes[i] )
             }
 
+
 def eventProcess = new EventProcessing ( eventStreams: eventsList,
-                                          minTime: 10,
-                                          maxTime: 400 )
+                                          minTime: 100,
+                                          maxTime: 1000 )
 
 new PAR( sourcesList + eventProcess).run()
